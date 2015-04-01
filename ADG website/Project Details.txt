@@ -1,0 +1,6 @@
+It is just a static website. Company has three different domains. So the task is to create a website for all the three website having a single home page.
+
+Technologies used:-
+Html 
+Css
+Javascript

@@ -1,0 +1,371 @@
+@charset "utf-8";
+
+/* 200 x 200 */			
+.boxgrid{ 
+	width: 200px; 
+	height: 200px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6); 
+	border: solid 10px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #000000;
+}
+.captionfull .boxcaption{
+	top: 200px;
+	left: 0;
+}
+.caption .boxcaption{
+	top: 160px;
+	left: 0;
+}
+.boxgrid img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+}
+.boxgrid span a{ 
+	margin-left:10px;
+	color:#ffffff; 
+	font-weight:normal;
+	font-size: 12px;
+	font-family:'Oswald', arial, sans-serif;
+	padding:7px 15px 7px 15px;
+	color: #ffffff;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+	-moz-box-shadow: 0 1px 3px #000000;
+	-webkit-box-shadow: 0 1px 3px #000000;
+	border-top: 1px #7ec9ef solid;
+	border-bottom: 0px #03202e solid;
+	border-right: 0px #0c6491 solid;
+	border-left: 0px #0c6491 solid;
+	background-color:#0c6491;
+	background-image:url(../images/gloss.png);
+	background-position:center;
+	background-repeat:repeat-x;		
+}
+.boxgrid span a:hover{ 
+	background-image:url(../images/gloss2.png);
+	background-position:center;
+	background-repeat:repeat-x;	
+}
+.boxgrid p{ 
+	padding: 0 10px;
+	margin-bottom:15px; 
+	color:#999999; 
+	font-weight:normal; 
+	font-size:12px;
+	font-family: "Arimo", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+	line-height:22px;
+}
+.boxgrid h3{ 
+	padding: 10px 10px; 
+	color:#ffffff; 
+	font-weight:normal;
+	font-size:18px;
+	font-family: "Oswald", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+}
+.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000000; 
+	height: 80px; 
+	width: 100%; 
+	opacity: .8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+/* 280 x 300 */			
+.boxgrid300{ 
+	width: 280px; 
+	height: 240px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);  
+	border: solid 10px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #000000;
+}
+.captionfull .boxcaption{
+	top: 200px;
+	left: 0;
+}
+.caption .boxcaption{
+	top: 160px;
+	left: 0;
+}
+.boxgrid300 img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+}
+.boxgrid300 span a{ 
+	margin-left:10px;
+	color:#ffffff; 
+	font-weight:normal;
+	font-size: 12px;
+	font-family:'Oswald', arial, sans-serif;
+	padding:7px 15px 7px 15px;
+	color: #ffffff;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+	-moz-box-shadow: 0 1px 3px #000000;
+	-webkit-box-shadow: 0 1px 3px #000000;
+	border-top: 1px #7ec9ef solid;
+	border-bottom: 0px #03202e solid;
+	border-right: 0px #0c6491 solid;
+	border-left: 0px #0c6491 solid;
+	background-color:#0c6491;
+	background-image:url(../images/gloss.png);
+	background-position:center;
+	background-repeat:repeat-x;		
+}
+.boxgrid300 span a:hover{ 
+	background-image:url(../images/gloss2.png);
+	background-position:center;
+	background-repeat:repeat-x;	
+}
+.boxgrid300 p{ 
+	padding: 0 10px;
+	margin-bottom:15px; 
+	color:#999999; 
+	font-weight:normal; 
+	font-size:12px;
+	font-family: "Arimo", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+	line-height:22px;
+}
+.boxgrid300 h3{ 
+	padding: 10px 10px; 
+	color:#ffffff; 
+	font-weight:normal;
+	font-size:22px;
+	font-family: "Oswald", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+}
+.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000000; 
+	height: 80px; 
+	width: 100%; 
+	opacity: .8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+/* 440 x 400 */			
+.boxgrid400{
+	width: 250px;
+	height: 250px;
+	margin-right:20px;
+	margin-bottom:20px;
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);
+	border: solid 10px #ffffff;
+	overflow: hidden;
+	position: relative;
+	box-shadow: 1px 1px 3px #000000;
+}
+
+.captionfull .boxcaption{
+	top: 200px;
+	left: 0;
+}
+.caption .boxcaption{
+	top: 160px;
+	left: 0;
+}
+.boxgrid400 img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+}
+.boxgrid400 span a{ 
+	margin-left:10px;
+	color:#ffffff; 
+	font-weight:normal;
+	font-size: 12px;
+	font-family:'Oswald', arial, sans-serif;
+	padding:7px 15px 7px 15px;
+	color: #ffffff;
+	text-shadow:0 0 0 transparent, 0px 1px 0px #000000;
+	-moz-box-shadow: 0 1px 3px #000000;
+	-webkit-box-shadow: 0 1px 3px #000000;
+	border-top: 1px #7ec9ef solid;
+	border-bottom: 0px #03202e solid;
+	border-right: 0px #0c6491 solid;
+	border-left: 0px #0c6491 solid;
+	background-color:#0c6491;
+	background-image:url(../images/gloss.png);
+	background-position:center;
+	background-repeat:repeat-x;	
+}
+.boxgrid400 span a:hover{ 
+	background-image:url(../images/gloss2.png);
+	background-position:center;
+	background-repeat:repeat-x;	
+}
+.boxgrid400 p{ 
+	padding: 0 10px;
+	margin-bottom:15px;
+	color:#999999; 
+	font-weight:normal; 
+	font-size:12px;
+	font-family: "Arimo", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+	line-height:22px;
+}
+.boxgrid400 h3{ 
+	padding: 10px 10px; 
+	color:#ffffff; 
+	font-weight:normal;
+	font-size:22px;
+	font-family: "Oswald", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0px 1px 1px #111111;
+}
+.boxcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000000; 
+	height: 80px; 
+	width: 100%; 
+	opacity: .8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
+
+/* 70 x 70 */			
+.boxsmgrid{ 
+	width: 70px; 
+	height: 70px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);  
+	border: solid 10px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #000000;
+}
+/* Footer 55 x 55 */
+.footer .boxsmgrid{ 
+	width: 55px; 
+	height: 55px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6); 
+	border: solid 5px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #222222;
+}
+/* Footer 55 x 55 */
+.sidebarright .boxsmgrid{ 
+	width: 55px; 
+	height: 55px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);  
+	border: solid 5px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #222222;
+}
+/* Footer 55 x 55 */
+.sidebarleft .boxsmgrid{ 
+	width: 55px; 
+	height: 55px; 
+	margin-right:20px;
+	margin-bottom:20px; 
+	float:left;
+	/* Fallback for web browsers that doesn't support RGBa */
+	background: rgb(0, 0, 0);
+	/* RGBa with 0.6 opacity */
+	background: rgba(0, 0, 0, 0.6);  
+	border: solid 5px #ffffff; 
+	overflow: hidden; 
+	position: relative;
+	box-shadow: 1px 1px 3px #222222;
+}
+.captionfull .boxsmcaption{
+	top: 200px;
+	left: 0;
+}
+.caption .boxsmcaption{
+	top: 160px;
+	left: 0;
+}
+.boxsmgrid img{ 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	border: 0; 
+}
+.boxsmgrid a{
+	color:#5fa3d2; 
+	font-weight:normal;
+	font-size:12px;
+	font-family: "Oswald", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000; 
+}
+.boxsmgrid a:hover {
+	color:#ffffff; 
+	font-weight:normal;
+}
+.boxsmgrid p{
+	padding-top:10px;
+	text-align:center; 
+	color:#ffffff; 
+	font-weight:normal; 
+	font-size:12px;
+	font-family: "Arimo", Arial, sans-serif;
+	text-shadow:0 0 0 transparent, 0 1px 0px #000000;
+	line-height:16px;
+}
+.boxsmcaption{ 
+	float: left; 
+	position: absolute; 
+	background: #000000; 
+	height: 80px; 
+	width: 100%; 
+	opacity: .8; 
+	/* For IE 5-7 */
+	filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+	/* For IE 8 */
+	-MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+}
