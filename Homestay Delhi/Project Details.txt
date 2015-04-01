@@ -1,0 +1,9 @@
+Developed a web portal (like orkut) for the “Planet Help Society”.
+
+User can make their profile, can sell and buy houses.
+Technologies used:
+	HTML
+	CSS
+	Javascript
+	Php
+	Mysql 

@@ -1,0 +1,717 @@
+/* Normal, standard links. */
+a:link {
+	 color: #000;
+	 text-decoration: none;
+}
+a:visited {
+	 color: #red;
+	 text-decoration: none;
+}
+a:hover {
+	 color: green;
+	 text-decoration: underline;
+}
+/* Navigation links - for the link tree. */
+
+.nav, .nav:link, .nav:visited {
+	 color: #000;
+	 text-decoration: none;
+}
+.nav:link {
+	 color: #red;
+	 text-decoration: none;
+}
+.nav:visited {
+	 color: #green;
+	 text-decoration: none;
+}
+a.nav:hover {
+	 color: red;
+	 text-decoration: underline;
+}
+/* Navigation links - for the link tree. */
+span.pathway 
+{
+	display: block;
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #666666;
+	font-weight: normal;
+}
+span.pathway img 
+{
+	margin: 0px 10px;
+	vertical-align: middle;
+}
+div#pathway 
+{
+	margin-bottom: 10px;
+	padding-left: 8px;
+}
+/* Tables should show empty cells. */
+table {
+	 empty-cells: show;
+}
+/* By default (td, body..) use verdana in black. */
+body, td, th, tr 
+{
+	color: #333333;
+	font-size: 12px;
+	font-family: verdana, sans-serif;
+	line-height: 135%;
+}
+/* The main body of the entire forum. */
+body 
+{
+	background: #fff;
+	margin: 0;
+	padding: 12px 15px 0 15px;
+}
+/* Input boxes - just a bit smaller than normal so they align well. */
+input, textarea, button
+{
+	color: #000;
+	font-family: verdana, sans-serif;
+	background: #f9f9f9 url(images/bg3.png);
+	border: 1px solid #fff;
+	padding: 2px;
+}
+input, button
+{
+	font-size: 90%;
+}
+textarea
+{
+	font-size: 100%;
+	color: #151515;
+	font-family: verdana, sans-serif;
+	background: #fff;
+}
+/* All input elements that are checkboxes or radio buttons. */
+input.check
+{
+}
+/* Selects are a bit smaller, because it makes them look even better 8). */
+select
+{
+	font-size: 90%;
+	font-weight: normal;
+	color: #555;
+	font-family: verdana, sans-serif;
+	background: #fff;
+}
+/* Standard horizontal rule.. ([hr], etc.) */
+hr, .hrcolor
+{
+	height: 1px;
+	border: 0;
+	color: #111;
+	background-color: green;
+}
+/* No image should have a border when linked */
+
+a img {
+	 border: 0;
+}
+/* A quote, perhaps from another post. */
+.quote
+{
+	color: #111;
+	background-color: #999999;
+	margin: 1px;
+	padding: 1px;
+	font-size: x-small;
+	font-style: italic;
+	line-height: 1.4em;
+}
+
+/* A code block - maybe even PHP ;). */
+.code
+{
+	color: #000000;
+	background-color: #fff;
+	font-family: "courier new", "times new roman", monospace;
+	font-size: x-small;
+	line-height: 1.3em;
+	/* Put a nice border around it. */
+	border: 1px solid #000000;
+	margin: 1px auto 1px auto;
+	padding: 1px;
+	width: 99%;
+	/* Don't wrap its contents, and show scrollbars. */
+	white-space: nowrap;
+	overflow: auto;
+	/* Stop after about 24 lines, and just show a scrollbar. */
+	max-height: 24em;
+}
+
+/* The "Quote:" and "Code:" header parts... */
+.quoteheader, .codeheader
+{
+	background: #858585;
+	color: #111111;
+	padding: 5px;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: bold;
+	font-size: x-small;
+	line-height: 1.2em;
+}
+.inputs { 
+	color: #f9f9f9;
+	border: 2px solid green;
+	background: url(images/bgsearch.gif);
+	text-indent: 0.2cm;
+}
+.inputs:hover {
+	border: 2px solid  #fff;
+}
+.submit:hover {
+	background: url(images/bgsearch.gif);
+	border: 2px solid #fff;
+}
+/* Generally, those [?] icons.  This makes your cursor a help icon. */
+
+.help {
+	 cursor: help;
+}
+/* /me uses this a lot. (emote, try typing /me in a post.) */
+.meaction {
+	 color: red;
+}
+/* The main post box - this makes it as wide as possible. */
+.editor {
+	 width: 96%;
+}
+/* Highlighted text - such as search results. */
+.highlight {
+	 background-color: yellow;
+	 font-weight: bold;
+	 color: black;
+}
+/* Alternating backgrounds for posts, and several other sections of the forum. */
+.windowbg {
+	background: #fff;
+	color: #222222;
+	font: 11px;
+	font-family: tahoma;
+	border: solid 1px #f9f9f9;
+
+}
+.windowbg2 {
+	background: #fff;
+	color: #111111;
+	font: 11px;
+	font-family: tahoma;
+	border: solid 1px #f9f9f9;
+}
+.windowbg3 {
+	background: #fff;
+	color: #333333;
+	font: 11px;
+	font-family: tahoma;
+	border: solid 1px #f9f9f9;
+}
+/* the today container in calendar */
+.calendar_today {
+	 background-color: #f6f6f6;
+}
+/* These are used primarily for titles, but also for headers (the row that says what everything in the table is.) */
+.titlebg, tr.titlebg th, tr.titlebg td, .titlebg2, tr.titlebg2 th, tr.titlebg2 td {
+	 color: #000;
+	 font-style: normal;
+	 background: orange url(images/catbg2.png) repeat-x;
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 line-height: 14px;
+}
+.titlebg, .titlebg a:link, .titlebg a:visited {
+	 font-weight: bold;
+	 color: #222;
+	 font-style: normal;
+	 font-size: 12px;
+}
+.titlebg a:hover {
+	 color: #444;
+}
+.titlebg3  {
+	 color: geen;
+}
+/* same as titlebg, but used where bold text is not needed */
+
+.titlebg2 a:link, .titlebg2 a:visited {
+	 color: #000;
+	 font-style: normal;
+	 text-decoration: underline;
+}
+.titlebg2 a:hover {
+	 text-decoration: underline;
+}
+/* This is used for categories, page indexes, and several other areas in the forum.
+.catbg and .catbg2 is for boardindex, while .catbg3 is for messageindex and display headers*/
+.catbg, tr.catbg td, .catbg3, tr.catbg3 td {
+	 color: #fff;
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 background: green url(images/catbg.png) repeat-x;
+}
+.catbg2, tr.catbg2, .catbg3 td { 
+	 color: #fff;
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 background: green url(images/catbg.png) repeat-x;
+}
+.catbg, .catbg2 {
+}
+.catbg, .catbg2 {
+	 font-weight: bold;
+	 font-size: 12px;
+}
+.catbg3, tr.catbg3 td, .catbg3 a:link, .catbg3 a:visited {
+	 font-size: 95%;
+	 color: #fff;
+	 text-decoration: none;
+}
+.catbg a:link, .catbg a:visited, .catbg2 a:link, .catbg2 a:visited {
+	 color: #fff;
+	 text-decoration: none;
+}
+.catbg a:hover, .catbg2 a:hover, .catbg3 a:hover {
+	 text-decoration: underline;
+}
+.catbgf {
+	height: 30px;
+	line-height: 30px;
+	color: #151515;
+	font-weight: bold;
+	background: #fff url(./images/katorta.png) repeat-x 0 0;
+ padding-left:5px;
+ padding-right:0;
+ padding-top:0;
+ padding-bottom:0
+}
+
+.catbgf-l {
+	background: #91046A url(./images/katsol.png) no-repeat 0 0;
+	padding-left: 10px;
+	position: relative
+}
+.catbgf-r {
+	background: #91046A url(./images/katsag.png) no-repeat 100% 0;
+	padding-right: 10px;
+	position: relative
+}
+.catbgf a:link
+{
+	color: #000;
+	text-decoration: none;
+}
+.catbgf a:visited
+{
+	color: #000;
+	text-decoration: none;
+}
+.catbgf a:hover
+{
+	text-decoration: underline;
+}
+
+/* This is used for tables that have a grid/border background color (such as the topic listing.) */
+.bordercolor {
+
+	 padding: 0px; 
+	 background: #f4f4f4; 
+}
+/* This is used on tables that should just have a border around them. */
+.tborder {
+	 padding: 0px;
+	 border: solid 1px #f1f1f1; 
+}
+/* Default font sizes: small (8pt), normal (10pt), and large (14pt). */
+.smalltext
+{
+	font-size: x-small;
+	font-family: verdana, sans-serif;
+}
+.middletext
+{
+	font-size: 90%;
+}
+.normaltext
+{
+	font-size: small;
+}
+.largetext
+{
+	font-size: large;
+}
+/* Posts and personal messages displayed throughout the forum. */
+.post, .personalmessage 
+{
+	 width: 100%;
+	 overflow: auto;
+	 line-height: 1.3em;
+}
+/* All the signatures used in the forum.  If your forum users use Mozilla, Opera, or Safari, you might add max-height here ;). */
+.signature 
+{
+	 width: 100%;
+	 overflow: auto;
+	 padding-bottom: 3px;
+	 line-height: 1.3em;
+}
+/* Sometimes there will be an error when you post */
+.error {
+	 color: red;
+}
+/* definitions for the main tab, active means the tab reflects which page is displayed */
+
+
+
+.maintab_first, .maintab_back, .maintab_last, .maintab_active_first, .maintab_active_back, .maintab_active_last, .mirrortab_first, .mirrortab_back, .mirrortab_last, .mirrortab_active_first, .mirrortab_active_back, .mirrortab_active_last {
+
+	 color: #111;
+
+	 vertical-align: top;
+
+	 text-transform: uppercase;
+
+}
+
+
+
+.maintab_back, .maintab_active_back, .mirrortab_back, .mirrortab_active_back {
+
+	 color: #333;
+
+	 text-decoration: none;
+
+	 font-size: 9px;
+
+	 font-family: tahoma, sans-serif;
+
+	 padding: 5px 10px 5px 10px;
+	 background: #f9f9f9;
+
+}
+
+
+
+.maintab_first,.mirrortab_first {
+
+	 display: none;
+
+}
+
+
+
+.maintab_back,.mirrortab_back {}
+
+
+
+.maintab_last,.mirrortab_last {
+
+	 display: none;
+
+}
+
+
+
+.maintab_active_first, .mirrortab_active_first {
+
+	 display: none;
+
+}
+
+
+
+.maintab_active_back, .mirrortab_active_back {
+
+	 background: #f5f5f5;
+
+	 border: solid 2px  #f9f9f9;
+
+}
+
+
+
+.maintab_active_last, .mirrortab_active_last {
+
+	 display: none;
+
+}
+
+/* how links behave in main tab. */
+
+
+
+.maintab_back a:link, .maintab_back a:visited, .mirrortab_back a:link, .mirrortab_back a:visited {
+
+	 color: #111;
+
+	 text-decoration: none;
+
+	 font-weight: bold;
+
+}
+
+
+
+.maintab_active_back a:link, .maintab_active_back a:visited, .mirrortab_active_back a:link, .mirrortab_active_back a:visited {
+
+	 color: #555;
+
+	 text-decoration: none;
+
+	 font-weight: bold;
+
+}
+
+
+
+.maintab_back a:hover, .maintab_active_back a:hover, .mirrortab_back a:hover, .mirrortab_active_back a:hover {
+
+	 text-decoration: underline;
+	 color: black;
+
+}
+#header{position:relative; height:184px; overflow:hidden; background: url(./images/head.png) repeat-x;}
+#head-r{height:184px; background:url(./images/head-r.png) 0 0 no-repeat; position:relative}
+#head-l{height:184px; background:url(./images/head-l.png) 100% 0 no-repeat; position:relative}
+#logo {
+	 position: absolute;
+	 top: 0px;
+	 left: 100px;
+	 display: block;
+	 width: 400px;
+	 height: 184px;
+	 cursor: pointer;
+	 background: url(./images/logom.png) no-repeat;
+}
+#userarea {
+	 height: 78px;
+	 float: right;
+	 padding: 25px 25px 0 0;
+	 text-align: right;
+	 font-size: 1.0em;
+	 color: #fff;
+	 font-family: tahoma, sans-serif; 
+}
+#userarea a:link, #userarea a:visited {
+	 color: #f9f9f9;
+	 text-decoration: none;
+}
+#userarea a:hover {
+	 color: orange;
+	 text-decoration: none;
+	 border-bottom: 1px dotted red;
+}
+
+#mainarea {
+	margin: 0;
+	background: #fff; 
+	padding: 5px 20px 0 20px;
+	border-left: solid 1px #84C40A;
+	border-right: solid 1px #84C40A;
+}
+#footer{ 
+        background: none; 
+        text-align:center; 
+        margin-top:0; 
+        padding:0; 
+        font-size:12px;
+        font-family:optima,verdana,sans-serif; 
+        color:#fff;
+        border-bottom: solid 7px #84C40A;
+	border-left: solid 1px #84C40A;
+	border-right: solid 1px #84C40A;
+}
+#footer-l{ 
+background:none;
+}
+#footer-r{
+ background:none;  
+ height: 39px;
+}
+#footerarea {
+	 text-align: center;
+}
+#footerarea {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #454545;
+	text-decoration: none;
+	float: center;
+}
+#footerarea a:link {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #454545;
+	text-decoration: none;
+	float: center;
+}
+#footerarea a:visited {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #454545;
+	text-decoration: none;
+}
+#footerarea a:hover {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: orange;
+	text-decoration: underline;
+	float: center;
+}
+#footerarea a:active {
+	font-family: Tahoma;
+	font-size: 10px;
+	color: #111;
+	text-decoration: none;
+}
+/* The AJAX notifier */
+#ajax_in_progress {
+	 background: #002962;
+	 color: white;
+	 text-align: center;
+	 font-weight: bold;
+	 font-size: 18pt;
+	 padding: 3px;
+	 width: 100%;
+	 position: fixed;
+	 top: 0;
+	 left: 0;
+}
+
+#searcharea {
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	top: 80px;
+	height: 58px;
+	width: 199px;
+	background: url(images/moon_10.png) no-repeat;
+	overflow: hidden;
+}
+
+#arama .inputbox {
+	background: #fff;
+	color: #555;
+	padding: 0px 6px 0;
+	border: none;
+	margin: 8px 0 0 20px;
+	width: 80px; 
+	height: 15px;
+
+
+}
+#navb{
+		  position:relative; 
+		  height:39px; 
+		  overflow:hidden; 
+		  background: url(./images/mainbgllllllllllllll.png) repeat-x;
+	border-left: solid 1px #84C40A;
+	border-right: solid 1px #84C40A;
+}
+#navb-r{height:39px; background: none;}
+#navb-l{height:39px; background: none;}
+
+#kwick { 
+width : 100%; 
+} 
+#kwick .kwicks { 
+background : transparent; 
+display : block; 
+height : 70px; 
+margin: 0; 
+padding: 0; 
+} 
+#kwick li { 
+float : left; 
+margin : 0; 
+padding : 0; 
+list-style : none; 
+} 
+#kwick .kwick { 
+display : block; 
+cursor : pointer; 
+overflow : hidden; 
+height : 70px; 
+width : 90px; 
+} 
+#kwick .kwick span { 
+display : none; 
+} 
+#kwick .opt0 { 
+background-color : transparent; 
+outline : none; 
+} 
+#kwick .opt1 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt2 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt3 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt4 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt5 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt6 {
+	background-color:transparent;
+	 outline: none;
+}
+
+#kwick .opt7 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt8 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt9 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt10 {
+	background-color:transparent;
+	 outline: none
+}
+
+#kwick .opt11 {
+	background-color:transparent;
+	 outline: none
+	 border-right: 0px none;
+}
+
+#toolbar {
+	height: 70px;
+	background: #f9f9f9 url(images/mootools_03.png) repeat-x;
+	border-left: solid 1px #84C40A;
+	border-right: solid 1px #84C40A;
+
+}
+#wrapper {
+
+}

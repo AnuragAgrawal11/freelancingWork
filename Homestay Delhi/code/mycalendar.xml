@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<events init="0" rinit="1/1/2000" from="1/1/2000">
+<day date="0" state="special" catagory=""></day>
+  <recurrent date="01/1/2009" type="year" monthday="1" month="1" pattern="1" state="holiday" catagory="United States Holidays">New Year's Day</recurrent>
+  <recurrent date="01/1/2009" type="year" monthday="1" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">New Year (Japan)</recurrent>
+  <recurrent date="01/1/2009" type="year" monthday="1" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Emancipation Day (African-American, United States)</recurrent>
+  <recurrent date="01/1/2009" type="year" monthday="1" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Feast of St. Basil (Christian, Orthodox)</recurrent>
+  <recurrent date="01/5/2009" type="year" monthday="5" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Guru Gobind Singh's Birthday (Sikh)</recurrent>
+  <recurrent date="01/6/2009" type="year" monthday="6" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Epiphany (Christian)</recurrent>
+  <recurrent date="01/6/2009" type="year" monthday="6" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Three Kings' Day (Puerto Rico, Dominican Republic)</recurrent>
+  <recurrent date="01/7/2009" type="year" monthday="7" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">Nativity of Jesus Christ (Christian, Orthodox)</recurrent>
+  <recurrent date="1/15/2009" type="year" monthday="15" month="1" pattern="1" state="holiday" catagory="United States Holidays">Martin Luther King, Jr.'s Birthday (Traditional)</recurrent>
+  <recurrent date="01/20/2009" type="year" monthday="20" month="1" pattern="1" state="holiday" catagory="United States Holidays">Inauguration Day</recurrent>
+  <recurrent date="01/26/2009" type="year" monthday="26" month="1" pattern="1" state="holiday" catagory="Ethnic and Religious">India Republic Day</recurrent>
+  <recurrent date="02/1/2009" type="year" monthday="1" month="2" pattern="1" state="holiday" catagory="United States Holidays">National Freedom Day</recurrent>
+  <recurrent date="02/01/2009" type="year" monthday="1" month="2" pattern="1" state="holiday" catagory="Ethnic and Religious">Black History Month (African-American)</recurrent>
+  <recurrent date="02/2/2009" type="year" monthday="2" month="2" pattern="1" state="holiday" catagory="United States Holidays">Groundhog Day</recurrent>
+  <recurrent date="02/2/2009" type="year" monthday="2" month="2" pattern="1" state="holiday" catagory="Ethnic and Religious">Candlemas (Christian)</recurrent>
+  <recurrent date="02/5/2009" type="year" monthday="5" month="2" pattern="1" state="holiday" catagory="Ethnic and Religious">Anniversary of the Constitution (Mexico)</recurrent>
+  <recurrent date="02/12/2009" type="year" monthday="12" month="2" pattern="1" state="holiday" catagory="United States Holidays">Lincoln's Birthday</recurrent>
+  <recurrent date="02/14/2009" type="year" monthday="14" month="2" pattern="1" state="holiday" catagory="Ethnic and Religious">St. Valentine's Day (Christian, United States)</recurrent>
+  <recurrent date="02/22/2009" type="year" monthday="22" month="2" pattern="1" state="holiday" catagory="United States Holidays">Washington's Birthday</recurrent>
+  <recurrent date="03/1/2009" type="year" monthday="1" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">Irish-American Heritage Month (Irish-American)</recurrent>
+  <recurrent date="03/1/2009" type="year" monthday="1" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">St. David's Day (Welsh)</recurrent>
+  <recurrent date="03/3/2009" type="year" monthday="3" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">The Doll Festival (Japan)</recurrent>
+  <recurrent date="03/17/2009" type="year" monthday="17" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">St. Patrick's Day (Ireland, United States)</recurrent>
+  <recurrent date="03/21/2009" type="year" monthday="21" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">Naw Ruz (Baha'i, Persia)</recurrent>
+  <recurrent date="03/25/2009" type="year" monthday="25" month="3" pattern="1" state="holiday" catagory="Ethnic and Religious">The Annunciation (Christian)</recurrent>
+  <recurrent date="04/1/2009" type="year" monthday="1" month="4" pattern="1" state="holiday" catagory="United States Holidays">April Fool's</recurrent>
+  <recurrent date="04/15/2009" type="year" monthday="15" month="4" pattern="1" state="holiday" catagory="United States Holidays">Federal Income Taxes Due</recurrent>
+  <recurrent date="04/22/2009" type="year" monthday="22" month="4" pattern="1" state="holiday" catagory="United States Holidays">Earth Day</recurrent>
+  <recurrent date="04/23/2009" type="year" monthday="23" month="4" pattern="1" state="holiday" catagory="Ethnic and Religious">St. George's Day (English)</recurrent>
+  <recurrent date="05/5/2009" type="year" monthday="5" month="5" pattern="1" state="holiday" catagory="Ethnic and Religious">Cinco de Mayo (Mexico)</recurrent>
+  <recurrent date="05/9/2009" type="year" monthday="9" month="5" pattern="1" state="holiday" catagory="Ethnic and Religious">Victory Day (Russia)</recurrent>
+  <recurrent date="05/19/2009" type="year" monthday="19" month="5" pattern="1" state="holiday" catagory="Ethnic and Religious">Malcolm X's Birthday (African-American, United States)</recurrent>
+  <recurrent date="05/29/2009" type="year" monthday="29" month="5" pattern="1" state="holiday" catagory="Ethnic and Religious">Ascension of Baha'u'llah (Baha'i)</recurrent>
+  <recurrent date="06/14/2009" type="year" monthday="14" month="6" pattern="1" state="holiday" catagory="United States Holidays">Flag Day</recurrent>
+  <recurrent date="06/16/2009" type="year" monthday="16" month="6" pattern="1" state="holiday" catagory="Ethnic and Religious">Martyrdom Day of Guru Arjan (Sikh)</recurrent>
+  <recurrent date="06/19/2009" type="year" monthday="19" month="6" pattern="1" state="holiday" catagory="Ethnic and Religious">Juneteenth (Freedom Celebration)</recurrent>
+  <recurrent date="07/1/2009" type="year" monthday="1" month="7" pattern="1" state="holiday" catagory="Ethnic and Religious">Canada Day (Canada)</recurrent>
+  <recurrent date="07/4/2009" type="year" monthday="4" month="7" pattern="1" state="holiday" catagory="United States Holidays">Independence Day</recurrent>
+  <recurrent date="07/4/2009" type="year" monthday="4" month="7" pattern="1" state="holiday" catagory="Ethnic and Religious">Fil-American Friendship Day (Phillippines, United States)</recurrent>
+  <recurrent date="07/9/2009" type="year" monthday="9" month="7" pattern="1" state="holiday" catagory="Ethnic and Religious">Martyrdom of the Bab (Baha'i)</recurrent>
+  <recurrent date="07/24/2009" type="year" monthday="24" month="7" pattern="1" state="holiday" catagory="Ethnic and Religious">Pioneer Day (Mormon)</recurrent>
+  <recurrent date="07/31/2009" type="year" monthday="31" month="7" pattern="1" state="holiday" catagory="Ethnic and Religious">Feast of St. Ignatius Loyola (Spain, Roman Catholic)</recurrent>
+  <recurrent date="08/1/2009" type="year" monthday="1" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Lammas and Lughnassad (Britain, Pagan, United States)</recurrent>
+  <recurrent date="08/12/2009" type="year" monthday="12" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Bon Festival (Japan)</recurrent>
+  <recurrent date="08/14/2009" type="year" monthday="14" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Independence Day (Pakistan)</recurrent>
+  <recurrent date="08/15/2009" type="year" monthday="15" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Independence Day (India)</recurrent>
+  <recurrent date="08/15/2009" type="year" monthday="15" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Liberation Day (Korea, South Korea)</recurrent>
+  <recurrent date="08/21/2009" type="year" monthday="21" month="8" pattern="1" state="holiday" catagory="Ethnic and Religious">Ascent of Prophet Muhammad</recurrent>
+  <recurrent date="09/16/2009" type="year" monthday="16" month="9" pattern="1" state="holiday" catagory="Ethnic and Religious">Independence Day (Mexico)</recurrent>
+  <recurrent date="09/19/2009" type="year" monthday="19" month="9" pattern="1" state="holiday" catagory="Ethnic and Religious">San Gennaro Day (Italian-American)</recurrent>
+  <recurrent date="09/22/2009" type="year" monthday="22" month="9" pattern="1" state="holiday" catagory="Ethnic and Religious">Religious Freedom Week (Sept 22 - Oct 1, 2005)</recurrent>
+  <recurrent date="10/12/2009" type="year" monthday="12" month="10" pattern="1" state="holiday" catagory="United States Holidays">Columbus Day (Tradional)</recurrent>
+  <recurrent date="10/24/2009" type="year" monthday="24" month="10" pattern="1" state="holiday" catagory="United States Holidays">United Nation's Day</recurrent>
+  <recurrent date="10/31/2009" type="year" monthday="31" month="10" pattern="1" state="holiday" catagory="Ethnic and Religious">Reformation Day (Christian)</recurrent>
+  <recurrent date="10/31/2009" type="year" monthday="31" month="10" pattern="1" state="holiday" catagory="Ethnic and Religious">Halloween (Christian)</recurrent>
+  <recurrent date="11/1/2009" type="year" monthday="1" month="11" pattern="1" state="holiday" catagory="Ethnic and Religious">All Saints Day (Christian, Roman Catholic)</recurrent>
+  <recurrent date="11/2/2009" type="year" monthday="2" month="11" pattern="1" state="holiday" catagory="Ethnic and Religious">Dia de los Muertos (Mexico, Latin America</recurrent>
+  <recurrent date="11/2/2009" type="year" monthday="2" month="11" pattern="1" state="holiday" catagory="Ethnic and Religious">All Souls' Day (Roman Catholic)</recurrent>
+  <recurrent date="11/11/2009" type="year" monthday="11" month="11" pattern="1" state="holiday" catagory="United States Holidays">Veterans' Day</recurrent>
+  <recurrent date="11/12/2009" type="year" monthday="12" month="11" pattern="1" state="holiday" catagory="Ethnic and Religious">Birthday of Baha'u'llah (Baha'i)</recurrent>
+  <recurrent date="12/12/2009" type="year" monthday="12" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Virgin of Guadalupe (Mexico)</recurrent>
+  <recurrent date="12/13/2009" type="year" monthday="13" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Santa Lucia Day (Sweden)</recurrent>
+  <recurrent date="12/15/2009" type="year" monthday="15" month="12" pattern="1" state="holiday" catagory="United States Holidays">Bill of Rights Day</recurrent>
+  <recurrent date="12/16/2009" type="year" monthday="16" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Las Posadas (Mexico)</recurrent>
+  <recurrent date="12/24/2009" type="year" monthday="24" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Christmas Eve (Christian, Roman Catholic, International)</recurrent>
+  <recurrent date="12/25/2009" type="year" monthday="25" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Christmas Day (Christian, Roman Catholic, International)</recurrent>
+  <recurrent date="12/26/2009" type="year" monthday="26" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Boxing Day (Canada, United Kingdom)</recurrent>
+  <recurrent date="12/26/2009" type="year" monthday="26" month="12" pattern="1" state="holiday" catagory="Ethnic and Religious">Kwanzaa (African-American)</recurrent>
+  <recurrent date="12/31/2009" type="year" monthday="31" month="12" pattern="1" state="holiday" catagory="United States Holidays">New Year's Eve</recurrent>
+
+<coffeecupcalendar version="4.2">
+
+  <calendar
+   x="0"
+   y="0"
+   w="200"
+   h="220"
+   bordersolid="f"
+   borderdashed="f"
+   useclickactivatescript="f"
+   bordercolor="0xFF6600"
+   bkfillclr="0xFFFFFF"
+   transparent="f"
+   transition="0"
+   docaption="t"
+   titleformatfont="Arial"
+   captionfont="Arial"
+   titleformatcolor="0x000000"
+   captionfontbkcolor="0xC0C0C0"
+   captionfontcolor="0x000000"
+   bkimage=""
+   mouseoversound="soundrangers_rollover19.mp3"
+   calendarlabel="Calendar"
+   months="January,February,March,April,May,June,July,August,September,October,November,December"
+   days="Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
+   showmonthyear="t"
+   daymax="3"
+   dateformat="mm/dd/yy"
+   defaulttextfont="arial"
+   defaulttextcolor="0x000000"
+   defaulttextbold="f"
+   defaulttextitalic="f"
+   defaulttextsize="8"
+   defaulttextalign="center"
+   titletextfont=""
+   titletextcolor="0x000000"
+   titletextbold="f"
+   titletextitalic="f"
+   titletextsize="0"
+   selectedtextcolor="0x000000"
+   disabledtextcolor="0xFFFFFF"
+   dayupbkfillclr="0xFFFFFF"
+   dayupbkfillalpha="100"
+   dayupbkdogradient="t"
+   dayupbkgradclr="0xC0C0C0"
+   dayupbkgradalpha="100"
+   dayupbkgradangle="70"
+   dayupbkbdrcolor="0x000000"
+   dayoverbkfillclr="0x808080"
+   dayoverbkfillalpha="100"
+   dayoverbkdogradient="f"
+   dayoverbkgradclr="0xC0C0C0"
+   dayoverbkgradalpha="100"
+   dayoverbkgradangle="70"
+   dayoverbkbdrcolor="0xFF9900"
+   dayselbkfillclr="0xFFCC00"
+   dayselbkfillalpha="100"
+   dayselbkdogradient="t"
+   dayselbkgradclr="0xC0C0C0"
+   dayselbkgradalpha="100"
+   dayselbkgradangle="70"
+   dayselbkbdrcolor="0x000000"
+   daydisbkfillclr="0x808080"
+   daydisbkfillalpha="100"
+   daydisbkdogradient="f"
+   daydisbkgradclr="0x808080"
+   daydisbkgradalpha="100"
+   daydisbkgradangle="70"
+   daydisbkbdrcolor="0x000000"
+   weekendupbkfillclr="0x808080"
+   weekendupbkfillalpha="100"
+   weekendupbkdogradient="f"
+   weekendupbkgradclr="0xC0C0C0"
+   weekendupbkgradalpha="100"
+   weekendupbkgradangle="70"
+   weekendupbkbdrcolor="0x000000"
+   weekendoverbkfillclr="0x808080"
+   weekendoverbkfillalpha="100"
+   weekendoverbkdogradient="f"
+   weekendoverbkgradclr="0xC0C0C0"
+   weekendoverbkgradalpha="100"
+   weekendoverbkgradangle="70"
+   weekendoverbkbdrcolor="0x000000"
+   specialupbkfillclr="0x808080"
+   specialupbkfillalpha="100"
+   specialupbkdogradient="f"
+   specialupbkgradclr="0x808080"
+   specialupbkgradalpha="100"
+   specialupbkgradangle="70"
+   specialupbkbdrcolor="0x000000"
+   specialoverbkfillclr="0x808080"
+   specialoverbkfillalpha="100"
+   specialoverbkdogradient="f"
+   specialoverbkgradclr="0x808080"
+   specialoverbkgradalpha="100"
+   specialoverbkgradangle="70"
+   specialoverbkbdrcolor="0x000000"
+   hdayupbkfillclr="0xFFFF00"
+   hdayupbkfillalpha="100"
+   hdayupbkdogradient="t"
+   hdayupbkgradclr="0xC0C0C0"
+   hdayupbkgradalpha="100"
+   hdayupbkgradangle="70"
+   hdayupbkbdrcolor="0x000000"
+   hdayoverbkfillclr="0xFFFF00"
+   hdayoverbkfillalpha="100"
+   hdayoverbkdogradient="t"
+   hdayoverbkgradclr="0xC0C0C0"
+   hdayoverbkgradalpha="100"
+   hdayoverbkgradangle="70"
+   hdayoverbkbdrcolor="0x000000"
+   eventupbkfillclr="0x0000FF"
+   eventupbkfillalpha="100"
+   eventupbkdogradient="t"
+   eventupbkgradclr="0xC0C0C0"
+   eventupbkgradalpha="100"
+   eventupbkgradangle="70"
+   eventupbkbdrcolor="0x000000"
+   eventoverbkfillclr="0x800080"
+   eventoverbkfillalpha="100"
+   eventoverbkdogradient="t"
+   eventoverbkgradclr="0xC0C0C0"
+   eventoverbkgradalpha="100"
+   eventoverbkgradangle="70"
+   eventoverbkbdrcolor="0x000000"
+  >
+<dateviewer 
+x="5"
+y="5"
+w="190"
+h="210"
+bkdomask="t"
+bkdobk="t"
+bkdogradient="t"
+bkfillclr="0x808080"
+bkfillalpha="100"
+bkgradclr="0xc0c0c0"
+bkgradalpha="100"
+bkgradangle="50"
+bkdoimg="f"
+bkimg="" 
+bkdobdr="t"
+bkbdrsolid="t"
+bkbdrcolor="0x808080"
+></dateviewer>
+
+  </calendar>
+</coffeecupcalendar></events>
