@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="downloadb.php"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="650"
+ height="542"
+ bkcolor="0xFFFFFF"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0xFFFFFF"
+ themecolor="0xFFFF99"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The E-Mail address you entered does not match !"
+ reqmessage="One or More Fields are Required !"
+ invalidemailmsg="is an invalid address, please correct it."
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="true"
+ disableclicktoactiveprompt="true"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx;"
+>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<image
+ image="bg.png"
+ x="20"
+ y="20"
+></image>
+
+<label
+ name="My Text 1"
+ x="110"
+ y="50"
+ w="150"
+ h="29"
+ text="Fill The Form"
+  fontname="Georgia"
+  fontcolor="0x3C312F"
+  fontsize="23"
+></label>
+
+<label
+ name="My Text 2"
+ x="50"
+ y="100"
+ w="41"
+ h="16"
+ text="Name"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x6B7171"
+  fontsize="13"
+></label>
+
+<textinput
+ name="Name"
+ x="110"
+ y="100"
+ w="390"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Email"
+ x="110"
+ y="140"
+ w="390"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<label
+ name="My Text 3"
+ x="50"
+ y="140"
+ w="44"
+ h="16"
+ text="E-mail"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x6B7171"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="50"
+ y="180"
+ w="45"
+ h="16"
+ text="Phone"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x6B7171"
+  fontsize="13"
+></label>
+
+<textinput
+ name="Phone"
+ x="110"
+ y="180"
+ w="390"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<label
+ name="My Text 8"
+ x="49"
+ y="224"
+ w="39"
+ h="16"
+ text="Notes"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x6B7171"
+  fontsize="13"
+></label>
+
+<textarea
+ name="Notes"
+ x="109"
+ y="224"
+ w="394"
+ h="118"
+ initvalue=""
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<submitbutton
+ name="Reset Button"
+ x="109"
+ y="354"
+ w="89"
+ h="27"
+ label="Submit"
+ fontname="Arial"
+ fontcolor="0x000000"
+ image="submit-grey.png"
+  fontsize="12"
+></submitbutton>
+
+</form>

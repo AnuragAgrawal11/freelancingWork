@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="query.php"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="474"
+ height="591"
+ bkcolor="0xFFFFFF"
+ transparent="f"
+ fontcolor="0x000000"
+ outlinecolor="0xFFFFFF"
+ themecolor="0xFFFF99"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The E-Mail address you entered does not match !"
+ reqmessage="One or More Fields are Required !"
+ invalidemailmsg="is an invalid address, please correct it."
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="true"
+ disableclicktoactiveprompt="true"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx;"
+>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<image
+ image="bg.png"
+ x="0"
+ y="25"
+ bk="true"
+></image>
+
+<label
+ name="My Text 1"
+ x="31"
+ y="38"
+ w="159"
+ h="29"
+ text="Quick Query :"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0xFFFFFF"
+  fontsize="23"
+></label>
+
+<label
+ name="My Text 2"
+ x="107"
+ y="50"
+ w="41"
+ h="16"
+ text="Name"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x9D9D9C"
+  fontsize="13"
+></label>
+
+<textinput
+ name="name"
+ x="200"
+ y="50"
+ w="266"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="email"
+ x="200"
+ y="101"
+ w="266"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<label
+ name="My Text 3"
+ x="104"
+ y="100"
+ w="44"
+ h="16"
+ text="E-mail"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x9D9D9C"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="103"
+ y="152"
+ w="45"
+ h="16"
+ text="Phone"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x9D9D9C"
+  fontsize="13"
+></label>
+
+<textinput
+ name="phone"
+ x="199"
+ y="150"
+ w="266"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<label
+ name="My Text 5"
+ x="96"
+ y="200"
+ w="53"
+ h="16"
+ text="Country"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x9D9D9C"
+  fontsize="13"
+></label>
+
+<textinput
+ name="city"
+ x="200"
+ y="250"
+ w="266"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<label
+ name="My Text 7"
+ x="120"
+ y="250"
+ w="28"
+ h="16"
+ text="City"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x9D9D9C"
+  fontsize="13"
+></label>
+
+<submitbutton
+ name="Submit Button"
+ x="200"
+ y="550"
+ w="189"
+ h="36"
+ label="Submit"
+ fontname="Arial"
+ fontcolor="0x000000"
+ image="button.png"
+  fontsize="12"
+></submitbutton>
+
+<combobox
+ name="country"
+ x="200"
+ y="198"
+ bkcolor="0xFFFFFF"
+ fontcolor="0x000000"
+ required="true"
+ isemail="false"
+ w="170"
+ h="20">
+  <item name="- Select -"></item>
+  <item name="Afghanistan"></item>
+  <item name="Albania"></item>
+  <item name="Algeria"></item>
+  <item name="American Samoa"></item>
+  <item name="Andorra"></item>
+  <item name="Angola"></item>
+  <item name="Anguilla"></item>
+  <item name="Antarctica"></item>
+  <item name="Antigua and Barbuda"></item>
+  <item name="Argentina"></item>
+  <item name="Armenia"></item>
+  <item name="Aruba"></item>
+  <item name="Australia"></item>
+  <item name="Austria"></item>
+  <item name="Azerbaijan"></item>
+  <item name="Bahamas"></item>
+  <item name="Bahrain"></item>
+  <item name="Bangladesh"></item>
+  <item name="Barbados"></item>
+  <item name="Belarus"></item>
+  <item name="Belgium"></item>
+  <item name="Belize"></item>
+  <item name="Benin"></item>
+  <item name="Bermuda"></item>
+  <item name="Bhutan"></item>
+  <item name="Bolivia"></item>
+  <item name="Bosnia and Herzegovina"></item>
+  <item name="Botswana"></item>
+  <item name="Bouvet Island"></item>
+  <item name="Brazil"></item>
+  <item name="British Indian Ocean Territory"></item>
+  <item name="British Virgin Islands"></item>
+  <item name="Brunei"></item>
+  <item name="Bulgaria"></item>
+  <item name="Burkina Faso"></item>
+  <item name="Burundi"></item>
+  <item name="Cambodia"></item>
+  <item name="Cameroon"></item>
+  <item name="Canada"></item>
+  <item name="Cape Verde"></item>
+  <item name="Cayman Islands"></item>
+  <item name="Central African Republic"></item>
+  <item name="Chad"></item>
+  <item name="Chile"></item>
+  <item name="China"></item>
+  <item name="Christmas Island"></item>
+  <item name="Cocos (Keeling) Islands"></item>
+  <item name="Colombia"></item>
+  <item name="Comoros"></item>
+  <item name="Congo"></item>
+  <item name="Cook Islands"></item>
+  <item name="Costa Rica"></item>
+  <item name="Croatia"></item>
+  <item name="Cuba"></item>
+  <item name="Cyprus"></item>
+  <item name="Czech Republic"></item>
+  <item name="Democratic Republic of the Congo"></item>
+  <item name="Denmark"></item>
+  <item name="Djibouti"></item>
+  <item name="Dominica"></item>
+  <item name="Dominican Republic"></item>
+  <item name="Ecuador"></item>
+  <item name="Egypt"></item>
+  <item name="El Salvador"></item>
+  <item name="Eritrea"></item>
+  <item name="Estonia"></item>
+  <item name="Ethiopia"></item>
+  <item name="Falkland Islands"></item>
+  <item name="Faroe Islands"></item>
+  <item name="Fiji"></item>
+  <item name="Finland"></item>
+  <item name="France"></item>
+  <item name="French Guiana"></item>
+  <item name="French Polynesia"></item>
+  <item name="French Southern Territories"></item>
+  <item name="Gabon"></item>
+  <item name="Gambia"></item>
+  <item name="Georgia"></item>
+  <item name="Germany"></item>
+  <item name="Ghana"></item>
+  <item name="Gibraltar"></item>
+  <item name="Greece"></item>
+  <item name="Greenland"></item>
+  <item name="Grenada"></item>
+  <item name="Guadeloupe"></item>
+  <item name="Guam"></item>
+  <item name="Guatemala"></item>
+  <item name="Guinea"></item>
+  <item name="Guinea-Bissau"></item>
+  <item name="Guyana"></item>
+  <item name="Haiti"></item>
+  <item name="Heard Island and McDonald Islands"></item>
+  <item name="Honduras"></item>
+  <item name="Hungary"></item>
+  <item name="Iceland"></item>
+  <item name="India"></item>
+  <item name="Indonesia"></item>
+  <item name="Iran"></item>
+  <item name="Iraq"></item>
+  <item name="Ireland"></item>
+  <item name="Israel"></item>
+  <item name="Italy"></item>
+  <item name="Jamaica"></item>
+  <item name="Japan"></item>
+  <item name="Jordan"></item>
+  <item name="Kazakhstan"></item>
+  <item name="Kenya"></item>
+  <item name="Kiribati"></item>
+  <item name="Kuwait"></item>
+  <item name="Kyrgyzstan"></item>
+  <item name="Laos"></item>
+  <item name="Latvia"></item>
+  <item name="Lebanon"></item>
+  <item name="Lesotho"></item>
+  <item name="Liberia"></item>
+  <item name="Libya"></item>
+  <item name="Liechtenstein"></item>
+  <item name="Lithuania"></item>
+  <item name="Luxembourg"></item>
+  <item name="Macedonia"></item>
+  <item name="Madagascar"></item>
+  <item name="Malawi"></item>
+  <item name="Malaysia"></item>
+  <item name="Maldives"></item>
+  <item name="Mali"></item>
+  <item name="Malta"></item>
+  <item name="Marshall Islands"></item>
+  <item name="Martinique"></item>
+  <item name="Mauritania"></item>
+  <item name="Mauritius"></item>
+  <item name="Mayotte"></item>
+  <item name="Mexico"></item>
+  <item name="Micronesia"></item>
+  <item name="Moldova"></item>
+  <item name="Monaco"></item>
+  <item name="Mongolia"></item>
+  <item name="Montserrat"></item>
+  <item name="Morocco"></item>
+  <item name="Mozambique"></item>
+  <item name="Myanmar"></item>
+  <item name="Namibia"></item>
+  <item name="Nauru"></item>
+  <item name="Nepal"></item>
+  <item name="Netherlands"></item>
+  <item name="Netherlands Antilles"></item>
+  <item name="New Caledonia"></item>
+  <item name="New Zealand"></item>
+  <item name="Nicaragua"></item>
+  <item name="Niger"></item>
+  <item name="Nigeria"></item>
+  <item name="Niue"></item>
+  <item name="Norfolk Island"></item>
+  <item name="North Korea"></item>
+  <item name="Northern Mariana Islands"></item>
+  <item name="Norway"></item>
+  <item name="Oman"></item>
+  <item name="Pakistan"></item>
+  <item name="Palau"></item>
+  <item name="Palestinian Territory"></item>
+  <item name="Panama"></item>
+  <item name="Papua New Guinea"></item>
+  <item name="Paraguay"></item>
+  <item name="Peru"></item>
+  <item name="Philippines"></item>
+  <item name="Pitcairn"></item>
+  <item name="Poland"></item>
+  <item name="Portugal"></item>
+  <item name="Puerto Rico"></item>
+  <item name="Qatar"></item>
+  <item name="Romania"></item>
+  <item name="Russia"></item>
+  <item name="Rwanda"></item>
+  <item name="Saint Helena"></item>
+  <item name="Saint Kitts and Nevis"></item>
+  <item name="Saint Lucia"></item>
+  <item name="Saint Pierre and Miquelon"></item>
+  <item name="Saint Vincent and the Grenadines"></item>
+  <item name="Samoa"></item>
+  <item name="San Marino"></item>
+  <item name="Sao Tome and Principe"></item>
+  <item name="Saudi Arabia"></item>
+  <item name="Senegal"></item>
+  <item name="Serbia"></item>
+  <item name="Seychelles"></item>
+  <item name="Sierra Leone"></item>
+  <item name="Singapore"></item>
+  <item name="Slovakia"></item>
+  <item name="Slovenia"></item>
+  <item name="Solomon Islands"></item>
+  <item name="Somalia"></item>
+  <item name="South Africa"></item>
+  <item name="South Korea"></item>
+  <item name="Spain"></item>
+  <item name="Sri Lanka"></item>
+  <item name="Sudan"></item>
+  <item name="Suriname"></item>
+  <item name="Svalbard and Jan Mayen"></item>
+  <item name="Swaziland"></item>
+  <item name="Sweden"></item>
+  <item name="Switzerland"></item>
+  <item name="Syria"></item>
+  <item name="Taiwan"></item>
+  <item name="Tajikistan"></item>
+  <item name="Tanzania"></item>
+  <item name="Thailand"></item>
+  <item name="Timor-Leste"></item>
+  <item name="Togo"></item>
+  <item name="Tokelau"></item>
+  <item name="Tonga"></item>
+  <item name="Trinidad and Tobago"></item>
+  <item name="Tunisia"></item>
+  <item name="Turkey"></item>
+  <item name="Turkmenistan"></item>
+  <item name="Turks and Caicos Islands"></item>
+  <item name="Tuvalu"></item>
+  <item name="U.S. Virgin Islands"></item>
+  <item name="Uganda"></item>
+  <item name="Ukraine"></item>
+  <item name="United Arab Emirates"></item>
+  <item name="United Kingdom"></item>
+  <item name="United States"></item>
+  <item name="United States Minor Outlying Islands"></item>
+  <item name="Uruguay"></item>
+  <item name="Uzbekistan"></item>
+  <item name="Vanuatu"></item>
+  <item name="Vatican"></item>
+  <item name="Venezuela"></item>
+  <item name="Vietnam"></item>
+  <item name="Wallis and Futuna"></item>
+  <item name="Western Sahara"></item>
+  <item name="Yemen"></item>
+  <item name="Yugoslavia"></item>
+  <item name="Zambia"></item>
+  <item name="Zimbabwe"></item>
+</combobox>
+
+<label
+ name="My Text 6"
+ x="29"
+ y="4"
+ w="148"
+ h="22"
+ text="Request Quote:"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x99CCFF"
+  fontsize="19"
+></label>
+
+<label
+ name="My Text 8"
+ x="18"
+ y="299"
+ w="136"
+ h="16"
+ text="Website URL (if any)"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x999999"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 9"
+ x="33"
+ y="349"
+ w="119"
+ h="16"
+ text="Solution required"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x999999"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 10"
+ x="28"
+ y="399"
+ w="119"
+ h="16"
+ text="Description of job"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x999999"
+  fontsize="13"
+></label>
+
+<combobox
+ name="Start date"
+ x="200"
+ y="501"
+ bkcolor="0xFFFFFF"
+ fontcolor="0x000000"
+ required="true"
+ isemail="false"
+ w="170"
+ h="20">
+  <item name="Immediately"></item>
+  <item name="Within 1-2 weeks"></item>
+  <item name="Not sure"></item>
+</combobox>
+
+<textinput
+ name="Website Url"
+ x="199"
+ y="297"
+ w="266"
+ h="22"
+ initvalue="http://www."
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Solution"
+ x="199"
+ y="346"
+ w="266"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ required="true"
+ editable="true"
+>
+</textinput>
+
+<textarea
+ name="Discription of job"
+ x="200"
+ y="400"
+ w="265"
+ h="73"
+ initvalue=""
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<label
+ name="My Text 11"
+ x="30"
+ y="504"
+ w="115"
+ h="16"
+ text="Description of job"
+ fontbold="bold"
+  fontname="Arial"
+  fontcolor="0x999999"
+  fontsize="13"
+></label>
+
+</form>
