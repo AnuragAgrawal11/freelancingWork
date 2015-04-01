@@ -1,0 +1,156 @@
+@charset "utf-8";
+.login-main {
+	height: ;
+	width: 355px;
+	
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: auto;
+	height: 360px;
+}
+.register-main {
+	height: 566px;
+	width: 450px;
+	margin: auto;
+	border-radius:4px;
+
+}
+.h3
+{
+	font-size:18px;
+	font-family:cabin;
+	font-weight:normal;
+	color:#f55501;
+	width:300px;
+	height:30px;
+	border-bottom:1px solid #636363;
+	margin-top:20px;
+	margin-right: 0;
+	margin-bottom: 0;
+	margin-left: 20px;
+	padding-top: 0px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+}
+#textboxid
+{
+    height:200px;
+    font-size:14pt;
+}
+
+.login-button {
+	float: left;
+	height: 40px;
+	width: 100px;
+	margin-left:10px;
+	margin-top: 20px;
+	/*background-image: url(image/button.png);*/
+	background-color:Orange;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+.register-button
+{
+	float: left;
+	height: 40px;
+	width: 304px;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom:5px;
+	background-image: url(image/button.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+
+}
+.main-form 
+{
+	margin:0px;
+	height: 450px;
+	width: 750px;
+	background-repeat: no-repeat;
+	border:solid 5px #D6EDF1;
+	border-radius:4px;
+}
+
+.section-heading
+{
+	width:100%;
+	height:100%;
+}
+
+.section-heading .first-td
+{
+	width:17%;
+	height:100%;
+	float:left;
+}
+.section-heading .second-td
+{
+	width:80%;
+	height:100%;
+	text-align:center;
+	background-color:#D6EDF1;
+	font-weight: bold;
+	border-radius:4px;
+
+}
+.section-heading .third-td
+{
+	width:3%;
+	height:100%;
+	float:right;
+}
+
+
+.login-section-body
+{
+	width:100%;
+	height:50%;	
+}
+
+.login-section-body .button
+{
+	background-position:center;
+}
+
+.reg-section-body
+{
+	width:100%;
+	height:100%;	
+}
+
+.reg-section-body .button
+{
+	background-position:center;	
+}
+
+.login-regis-div
+{
+	width:100%; 
+	height:93%; 
+	border:solid 2px #D6EDF1;
+	border-radius:4px;
+	background-color:#FEFFFF;
+	
+}
+
+.text-box
+{
+	height:30px; 
+	width:280px; 
+	margin:10px 0 0 10px; 
+	border:1px solid#f85906; 
+	color:#a0a0a0; 
+	padding:0 0 0 10px;
+	
+}
+
+.registration-right
+{
+float:left;
+width: auto;
+height:auto;
+
+}

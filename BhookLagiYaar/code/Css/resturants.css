@@ -1,0 +1,169 @@
+.main {
+	margin: auto;
+	height: auto;
+	width: 980px;
+}
+
+.header
+{
+	background-image: url(../images/header.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 145px;
+	width: 100%;
+	margin: auto;
+	border-bottom-radius:14px;
+	vertical-align: middle;
+	background-position: center;
+}
+.top-nav
+{
+font-family: Calibri;
+font-size:15px;
+font-weight:600;
+padding:62px 0 0 10px;
+}
+.top-nav:hover
+{
+color:#f55501;
+}
+.form-bg {
+	float: left;
+	height: 185px;
+	width: 980px;
+	background-image: url(../images/saa.jpg);
+	background-repeat: no-repeat;
+	border-radius:4px;
+	background-position: center center;
+}
+.form
+{
+margin:15px 120px 0 0;
+width:548px;
+float:right;
+	height:150px;
+	background-image: url(../images/short-form.png);
+}
+.select
+{
+width:214px;
+height:34px;
+border-radius:4px;
+border:none;
+
+}
+select2
+{
+background-image:url(../images/input-bg.png)no-repeat;
+}
+.content-main {
+	background-color: #FFFFFF;
+	float: left;
+	height: auto;
+	width: 980px;
+}
+.content-left
+{
+	float: left;
+	height: auto;
+	width: 740px;
+}
+.resturant {
+	background-image: url(../images/h3.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: left;
+	height: 235px;
+	width: 685px;
+	margin:5px 0 0 0;
+}
+h3
+{
+font-family: cabin;
+font-size:18px;
+color:#FFFFFF;
+font-weight:normal;
+padding:0 0 0 20px;
+}
+
+.order
+{
+font-family:Calibri;
+font-size:15px;
+font-weight:normal;
+}
+.content-right {
+	background-color: #FFFFFF;
+	float: right;
+	height: auto;
+	width: 230px;
+}
+.filter
+{
+	background-image: url(../images/filter-bg.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: right;
+	height: 463px;
+	width: 230px;
+
+}
+h2
+{
+font-family: cabin;
+font-size:22px;
+color:#FFFFFF;
+font-weight:normal;
+padding:2px 0 0 20px;
+}
+
+
+
+
+
+
+.footer {
+	background-image: url(../images/footer-bg.png);
+	background-repeat: repeat-x;
+	float: left;
+	height: 136px;
+	width: 100%;
+	margin-top:20px;
+}
+
+.nav-bottom
+{
+	width:440px;
+	height: auto;
+	float:left;
+	margin:25px 100px 0 0;
+
+}
+.nav-bottom ul
+{
+width:auto;
+height: auto;
+float: left;
+}
+.nav-bottom ul li
+{
+display:inline;
+}
+.nav-bottom ul li a
+{
+font: Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#a8a8a8;
+font-weight: 400;
+display:inline;
+margin-left:8px;
+}
+.social
+{
+font: Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#a8a8a8;
+font-weight: 400;
+padding:25px 180px 0 0;
+
+}

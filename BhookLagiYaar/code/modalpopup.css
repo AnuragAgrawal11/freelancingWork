@@ -1,0 +1,33 @@
+﻿body { 
+    BACKGROUND: #fff;FONT: 12px/1.25 "Helvetica Neue", Arial, sans-serif; 
+    COLOR: #222;
+}
+.confirm-dialog { 
+    BACKGROUND: url(img/box.png) no-repeat left top; 
+    MARGIN: 0px auto;WIDTH: 330px;PADDING-TOP: 14px; 
+    POSITION: relative;
+}
+.confirm-dialog .inner { 
+    PADDING-RIGHT: 20px;PADDING-LEFT: 20px; 
+    PADDING-BOTTOM: 11px;BACKGROUND: url(img/box.png) no-repeat left bottom; 
+    FLOAT: left;MARGIN: 0px 0px -20px 0px;WIDTH: 290px;PADDING-TOP: 0px;
+} 
+.confirm-dialog .base { 
+    BORDER-TOP: #ddd 1px solid;BACKGROUND: url(img/base.png) no-repeat left bottom; 
+    PADDING-BOTTOM: 4px;MARGIN-LEFT: -11px;MARGIN-RIGHT: -11px; 
+    PADDING-TOP: 4px;TEXT-ALIGN: center;
+}
+.confirm-dialog H2 { 
+    FONT-WEIGHT: bold;FONT-SIZE: 1.25em;COLOR: #f60;TEXT-ALIGN: center;
+} 
+.confirm-dialog input { 
+    WIDTH:50px;
+}     
+.close { 
+    DISPLAY: block;BACKGROUND: url(img/close.png) no-repeat 0px 0px; 
+    LEFT: -5px;WIDTH: 26px;TEXT-INDENT: -1000em;POSITION: absolute; 
+    TOP: -7px;HEIGHT: 26px; 
+}   
+.modalBackground {
+    background-color:Gray;filter:alpha(opacity=70);opacity:0.7;
+} 

@@ -1,0 +1,335 @@
+
+.main {
+	margin: auto;
+	height: auto;
+	width: 980px;
+}
+.header
+{
+	background-image: url(header.png);
+	background-repeat: no-repeat;
+	float: left;
+	height: 145px;
+	width: 100%;
+	margin: auto;
+	border-bottom-radius:14px;
+	vertical-align: middle;
+	background-position: center;
+}
+.top-nav
+{
+font-family: Calibri;
+font-size:15px;
+font-weight:600;
+padding:62px 0 0 10px;
+}
+.top-nav:hover
+{
+color:#f55501;
+}
+.cartoon
+{
+background:url(cartoon.png)no-repeat;
+width:462px;
+height:380px;
+float: left;
+	padding:20px 0 0 0;
+}
+.order
+{
+	width:415px;
+	float:right;
+	height:380px;
+	background-image: url(form-bg.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	padding:20px 0 0 0;
+	font-family: "Myriad Pro";
+	font-size:18px;
+	font-weight: 600;
+	color:#FFFFFF;
+	
+
+}
+.select
+{
+width:250px;
+height:34px;
+border-radius:4px;
+border:none;
+text-align:center;
+vertical-align:middle;
+}
+
+.select option
+{
+border-radius:4px;
+text-align:left;
+height:25px;
+}
+
+
+select2
+{
+background-image:url(input-bg.png)no-repeat;
+}
+.form
+{
+padding:150px 0 0 50px;
+}
+
+
+
+
+.button {
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 0;
+	outline: none;
+	cursor: pointer;
+	
+	
+	padding: 0 0 0;
+	
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.process {
+	float: left;
+	height: 50px;
+	width: 970px;
+	/*background-image: url(process.png);*/
+	background-image:url(../images/steps.jpg);
+	background-repeat: no-repeat;
+}
+.footer {
+	background-image: url(footer-bg.png);
+	background-repeat: repeat-x;
+	float: left;
+	height: 136px;
+	width: 100%;
+	margin-top:20px;
+}
+.nav-bottom
+{
+	/*width:440px;*/
+	height: auto;
+	float:left;
+	padding:25px 0px 0 0;
+	position:absolute;
+	
+}
+
+.copy-right
+{
+	 width:100%;
+	  height:30%;
+	  font: Arial, Helvetica, sans-serif;
+	  font-size:14px;
+	  color:#a8a8a8;
+	  font-weight: 400;
+}
+.nav-bottom ul
+{
+width:auto;
+height: auto;
+float: left;
+}
+.nav-bottom ul li
+{
+display:inline;
+}
+.nav-bottom ul li a
+{
+font: Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#a8a8a8;
+font-weight: 400;
+display:inline;
+margin-left:8px;
+}
+.social
+{
+font: Arial, Helvetica, sans-serif;
+font-size:14px;
+color:#a8a8a8;
+font-weight: 400;
+padding:25px 180px 0 0;
+
+}
+
+.contentLeft
+{
+    width:70%;
+    float:left;
+    margin:2px;
+   
+    min-height:600px;
+    
+    }
+    
+    .contentRight
+{
+    width:29%;
+    float:right;
+     margin:2px;
+    }
+    
+ 
+    .restaurants
+    {
+        width:100%;
+        font-family:Verdana;
+        margin:0;
+        min-height: 150px;
+        text-transform: uppercase;
+        background: none;   
+        margin-bottom: 20px;
+        border-left: 1px dashed #CCC;        
+        border-top: 1px dashed #CCC;        
+        border-right: 1px dashed #CCC;        
+        border-radius: 5px 5px 5px 5px; 
+        }
+        
+         .restaurants:hover
+    {
+        background: none;
+        }
+        
+   .Heading 
+   {
+      
+       color:White;
+       font-size:12pt;
+       height:26px;
+       text-align:left;
+       margin:2px;
+    background: none repeat scroll 0 0 #E0161F;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    padding-top: 5px;
+       }
+       
+       
+          .CusinesHeading 
+   {
+        font-family:Verdana;
+       color:black;
+       font-size:10pt;
+       height:20px;
+       text-align:left;
+       margin:2px;
+    background: none repeat scroll 0 0 #DEDEDE;
+    border-radius: 3px 3px 3px 3px;
+    font-weight: 800;
+    padding-bottom: 5px;
+    padding-top: 5px;
+       }
+        
+     .restaurants table
+     {
+         width:100%;
+          margin:2px;
+          padding-top:5px;
+          padding-bottom:5px;
+          font-size:8pt;
+         
+         }   
+         .restaurants table tr td{border-bottom:1px dashed #CCC;height:20px;}
+         
+         
+     .ItemGrid
+     {
+          font-family:Verdana;
+          width:100%;
+          margin:2px;
+          padding-top:5px;
+          padding-bottom:5px;
+          font-size:10pt;
+          
+         }    
+             
+     .ItemGrid tr td{border-bottom:1px dashed #CCC;height:36px;}
+         
+         
+         .orderButton
+         {
+           
+background: #B9B9B9;
+border: 1px solid CCC;
+border-radius: 5px 5px 5px 5px;
+cursor: pointer;
+height: 26px;
+padding-top: 8px;
+text-align: center;
+width: 99%;
+font-weight:bold;
+font-size:13pt;
+color:  Black;
+bottom: 0px;
+display: block;
+text-decoration:none;
+  font-family:Verdana;
+             }
+             
+              .orderButton:hover
+              {
+                  background: #E0161F;
+                  color: White;
+                  }
+              
+              .addcartButton
+         {
+           
+background: #E0161F;
+border: 1px solid CCC;
+border-radius: 10px 10px 10px 10px;
+cursor: pointer;
+height: 28px;
+text-align: center;
+font-weight:900;
+font-size:10pt;
+color:  White;
+bottom: 0px;
+display: block;
+text-decoration:none;
+  font-family:Verdana;
+             } 
+             
+                          .ConfOrderButton
+         {
+           
+background: #E0161F;
+border: 1px solid CCC;
+border-radius: 5px 5px 5px 5px;
+cursor: pointer;
+height: 28px;
+width:100px;
+text-align: center;
+font-weight:900;
+font-size:10pt;
+color:  White;
+bottom: 0px;
+display: block;
+text-decoration:none;
+  font-family:Verdana;
+  margin-right:20px;
+  margin-top:10px;
+  float:right;
+             }        
+             
+             

@@ -1,0 +1,27 @@
+
+#results {
+	border: 1px solid #BFBFBF;
+	border-bottom: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color: #757575; 
+	font-weight:600;
+	padding: 0px;
+	display: none;
+}
+
+#results div {
+    border-bottom: 1px solid #BFBFBF;
+    padding: 10px;
+	
+}
+
+#results .selected {
+	background-color: #666;
+	color: #fff;
+}
+
+#results .unselected {
+	background-color: #fff;
+	color: #666;
+}

@@ -1,0 +1,161 @@
+body
+{
+	margin:0;
+	padding:0;
+}
+.main {
+	height: auto;
+	width: 100%;
+	margin:auto;
+}
+
+.header {
+	float: left;
+	height: 100px;
+	width:100%;
+	background-image: url(../TemplateImages/nheader-bg.jpg);
+	background-repeat: repeat-x;
+	border-bottom-right-radius: 7px;
+	border-bottom-left-radius: 7px;
+}
+.strip
+{
+width:100%;
+height:auto;
+margin:auto;
+float: left;
+border-bottom:1px solid #f76139;
+}
+.main-content
+{
+width:100%;
+height:450px;
+float:left;
+margin:auto;
+}
+
+.content-right {
+	float: right;
+	height: 450px;
+	width:500px;
+}
+.content-left {
+	float: left;
+	height: 450px;
+	width: 430px;
+	margin:0 0 0 0 ;
+}
+.form-main {
+	float: right;
+	height: 210px;
+	width: 450px;
+	margin: 100px 30px 0 0;
+	background-image: url(../TemplateImages/nform-bg.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	border-radius: 5px;
+	border: 1px solid #f76139;
+}
+.h3
+{
+font-family:calibri;
+font-size:20px;
+width: auto;
+height:auto;
+color:#f76139;
+font-weight:normal;
+text-align:center;
+margin:25px 0 0 0 ;
+}
+.footer-main
+{
+width:100%;
+height:230px;
+float:left;
+margin:auto;
+background:url(../TemplateImages/nfooter-bg.jpg) repeat-x;
+}
+.footer-a
+{
+width:20%;
+height:220px;
+float:left;
+margin:10px 0 0 0px;
+}
+.footerli {
+    /* Bullet color */
+    color: #f76139;
+    list-style-type: square;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	padding:4px 0 0 0;
+}
+
+.footerspan span {
+    /* Text color */
+    color: #FFFFFF;
+}
+.footer-b
+{
+width:35%;
+height:220px;
+float:left;
+}
+.footer-c
+{
+width:25%;
+height:220px;
+float:left;
+margin:20px 0 0 0;
+}
+h4
+{
+font-family:calibri;
+font-size: 16px;
+color:#f76139;
+}
+p
+{
+	font-family:calibri;
+	font-size: 12px;
+	color:#ffffff;
+	line-height: 15px;
+}
+.footer-d
+{
+width:20%;
+height:220px;
+float: right;
+margin:30px 0 0 0;
+}
+
+
+/*-----contact-to-us-page-------*/
+.contact-to-us-main
+{
+width:540px;
+height:auto;
+float:left;
+border:1px solid #f76139;
+margin:10px 0 0 20px;
+
+}
+.h2
+{
+width:250px;
+border-bottom:1px solid #f76139;
+float:left;
+height:auto;
+font-family:calibri;
+font-size:24px;
+color:#f76139;
+margin:20px 0 0 70px ;
+}
+.form-field
+{
+width:80%;
+height:auto;
+float:left;
+margin:20px 0 0 70px;
+}
+/*-----/contact-to-us-page-------*/

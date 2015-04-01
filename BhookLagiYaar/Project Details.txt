@@ -1,0 +1,15 @@
+BhookLagiYaar
+
+My role is to develop a portal to order food online.
+ Application Features:-
+1.	user can search restaurant near him and can order food online from them
+2.	Complete online food ordering system.
+
+Technologies used:
+	HTML5
+	CSS
+	Javascript
+	Ajax
+	Php
+	Mysql
+
