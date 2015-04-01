@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form url="contactmail.php"
+ window="_self"
+ method="POST"
+ fontname="MS Sans Serif"
+ width="406"
+ height="419"
+ bkcolor="0xFFFFFF"
+ transparent="t"
+ fontcolor="0x000000"
+ themecolor="0xFFFF99"
+ fontcolor2="#000000"
+ bkcolor2="#FFFFFF"
+ includeresults="false"
+ emailuser="false"
+ verifymessage="The E-Mail address you entered does not match !"
+ reqmessage="One or More Fields are Required !"
+ invalidemailmsg="is an invalid address, please correct it."
+ transition="0"
+ autoresponseincluderesults="f"
+ autoresponseaddtotop="f"
+ usephp="true"
+ disableclicktoactiveprompt="true"
+ extensions="*.txt;*.gif;*.jpg;*.jpeg;*.zip;*.doc;*.png;*.pdf;*.rtf;*.html;*.docx;*.xslx;"
+>
+
+<hidden
+ name="subject"
+ value=""
+></hidden>
+
+<label
+ name="My Text 2"
+ x="9"
+ y="5"
+ w="46"
+ h="16"
+ text="NAME:"
+  fontname="Arial"
+  fontcolor="0x3E3E3E"
+  fontsize="13"
+></label>
+
+<textinput
+ name="Name"
+ x="9"
+ y="24"
+ w="274"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<textinput
+ name="Email"
+ x="9"
+ y="90"
+ w="275"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ emailbox="true"
+ editable="true"
+  restrict="email"
+>
+</textinput>
+
+<label
+ name="My Text 3"
+ x="9"
+ y="71"
+ w="51"
+ h="16"
+ text="E-MAIL:"
+  fontname="Arial"
+  fontcolor="0x3E3E3E"
+  fontsize="13"
+></label>
+
+<label
+ name="My Text 4"
+ x="8"
+ y="144"
+ w="54"
+ h="16"
+ text="PHONE:"
+  fontname="Arial"
+  fontcolor="0x352C20"
+  fontsize="13"
+></label>
+
+<textinput
+ name="Phone"
+ x="8"
+ y="163"
+ w="275"
+ h="22"
+ initvalue=""
+ maxchars="25"
+ bkcolor="0xFFFFFF"
+  fontname="Arial"
+  fontcolor="0x000000"
+ editable="true"
+>
+</textinput>
+
+<label
+ name="My Text 5"
+ x="8"
+ y="212"
+ w="115"
+ h="16"
+ text="YOUR MESSAGE:"
+  fontname="Arial"
+  fontcolor="0x333333"
+  fontsize="13"
+></label>
+
+<textarea
+ name="Message"
+ x="9"
+ y="232"
+ w="388"
+ h="128"
+ initvalue=""
+ wordwrap="true"
+ editable="true"
+ bkcolor="0xFFFFFF"
+  fontsize="12"
+  fontname="Arial"
+  fontcolor="0x000000"
+></textarea>
+
+<label
+ name="My Text 6"
+ x="300"
+ y="75"
+ w="7"
+ h="15"
+ text=""
+  fontname="Times New Roman"
+  fontcolor="0x352C20"
+  fontsize="13"
+></label>
+
+<submitbutton
+ name="Submit Button"
+ x="10"
+ y="380"
+ w="87"
+ h="25"
+ label="Submit"
+ fontname="Arial"
+ fontcolor="0x000000"
+ image="submitrectangleroundsmall.png"
+  fontsize="12"
+></submitbutton>
+
+</form>
