@@ -1,0 +1,5 @@
+Developed a GPS based application (in which user can search any type of service providers near him) 
+user can view service providers on map.
+user can set an appointment for the request.
+
+Technologies Used: PHP, HTML-5, JavaScript, CSS, MySQL, Phone gap, Jquery Mobile

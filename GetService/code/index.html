@@ -1,0 +1,1318 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <title>GetServiced</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet"  href="jquery.mobile-1.0.1.min.css" />
+  <link rel="stylesheet" href="assets/css/jqm-docs.css" />
+  <link href="css/mobiscroll-2.0.custom.min.css" rel="stylesheet" type="text/css" />
+  <link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet">
+	<script src="http://vjs.zencdn.net/c/video.js"></script>
+  <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" charset="utf-8" src="cordova-1.7.0.js"></script>
+  <script type="text/javascript" charset="utf-8" src="SOTCAnimator.js"></script>
+  <script type="text/javascript" charset="utf-8" src="common.js"></script>
+  <script src="jquery.js"></script>
+  <script type="text/javascript" charset="utf-8" src="main.js"></script>
+  <script src="jquery.json-2.3.js"></script>
+  <script src="experiments/themeswitcher/jquery.mobile.themeswitcher.js"></script>
+  <script src="assets/js/jqm-docs.js"></script>
+  <script language="Javascript" type="text/javascript" src="easyjquery.js"></script>
+  <script type="text/javascript" src="jquery.mobile-1.0.1.min.js"></script>
+  <script src="js/mobiscroll-2.0.custom.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+	function oncomplete(){
+		
+				$("#appointmentdate").hide();
+				
+				var opt = {
+                
+            }
+            	opt.date = {preset : 'date'};
+	opt.datetime = { preset : 'datetime', dateFormat: "yy:mm:dd", minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5,timeFormat: 'HH:ii:ss'  };
+	opt.time = {preset : 'time'};
+				
+				
+				$("#appointmentdate").show();
+				
+                $('#appointmentdate1').val('').scroller('destroy').scroller($.extend(opt['datetime'], { theme: 'jqm', mode: 'scroller', display: 'modal' }));
+				
+				
+		}
+		
+		
+		
+		function oncompletereminder(){
+		
+				
+				$("#reminderdate").hide();
+				var opt = {
+                
+            }
+            	opt.date = {preset : 'date'};
+	opt.datetime = { preset : 'datetime', dateFormat: "yy:mm:dd", minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5,timeFormat: 'HH:ii:ss'  };
+	opt.time = {preset : 'time'};
+				
+				
+				
+				$("#reminderdate").show();
+               
+				 $('#reminderdate1').val('').scroller('destroy').scroller($.extend(opt['datetime'], { theme: 'jqm', mode: 'scroller', display: 'modal' }));
+				
+		}
+		
+		function oncompleteappointmentedit(){
+		
+				
+				$("#edit_appointmentdate").hide();
+				var opt = {
+                
+            }
+            	opt.date = {preset : 'date'};
+	opt.datetime = { preset : 'datetime', dateFormat: "yy:mm:dd", minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5,timeFormat: 'HH:ii:ss'  };
+	opt.time = {preset : 'time'};
+				
+				
+				
+				$("#edit_appointmentdate").show();
+               
+				 $('#edit_appointmentdate1').val('').scroller('destroy').scroller($.extend(opt['datetime'], { theme: 'jqm', mode: 'scroller', display: 'modal' }));
+				
+		}
+		function oncompletereminderedit(){
+		
+				
+				$("#edit_reminderdate").hide();
+				var opt = {
+                
+            }
+            	opt.date = {preset : 'date'};
+	opt.datetime = { preset : 'datetime', dateFormat: "yy:mm:dd", minDate: new Date(2012,3,10,9,22), maxDate: new Date(2014,7,30,15,44), stepMinute: 5,timeFormat: 'HH:ii:ss'  };
+	opt.time = {preset : 'time'};
+				
+				
+				
+				$("#edit_reminderdate").show();
+               
+				 $('#edit_reminderdate1').val('').scroller('destroy').scroller($.extend(opt['datetime'], { theme: 'jqm', mode: 'scroller', display: 'modal' }));
+				
+		}
+		
+		
+		
+		
+        
+    </script>
+  <script language="Javascript">
+  
+
+
+    function my_callback2(json) {
+        // more information at http://api.easyjquery.com/test/demo-ip.php
+        IP = json.IP;
+		
+		
+    }
+
+    // 2. Setup Callback Function
+
+    EasyjQuery_Get_IP("my_callback2","full"); // full version
+
+</script>
+  <style>
+
+​  .ui-collapsible .ui-icon{
+            background-position: -180px 50%;/*Position of up icon in icon sprite*/
+			margin-left:88%;
+        }
+        
+        .ui-collapsible-collapsed .ui-icon{
+            background-position: -216px 50%;/*Position of down icon in icon sprite*/
+			margin-left:88%;
+        }
+		
+		.ui-collapsible-set .ui-btn-icon-left .ui-icon {
+    left:auto;right:15px;
+}
+
+#loading-image {
+	position: fixed;
+	top: 40%;
+	right: 40%;
+	z-index: 1;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px; /* future proofing */
+	-khtml-border-radius: 10px;
+}
+select {
+	-webkit-appearance: none;
+}
+</style>
+<style>
+.jqm .dw {
+	z-index: 1003;
+}
+.jqm .dwv {
+	position: static;
+	width: auto;
+}
+</style>
+  <script>
+function slideExample2(elementId, headerElement)
+{
+   var element = document.getElementById(elementId);
+   
+   if(element.style.width != "0px")
+   {
+      animate(elementId, 0, 0, 270, 400, 50, null);
+      element.up = true;
+      element.down = false;
+      headerElement.innerHTML = '<img src="images/menuopen.png">';
+	  
+	  
+	 // alert(document.getElementById('exampleHeader2').style.zIndex);
+	 
+	  
+   }
+   else
+   {
+	  document.getElementById('exampleHeader2').style.zIndex = 1;
+	  document.getElementById('examplePanel2').style.zIndex= 1000;
+	  document.getElementById('exampleHeader3').style.zIndex = 1;
+	  document.getElementById('examplePanel3').style.zIndex= 1000;
+	  document.getElementById('exampleHeader4').style.zIndex = 1;
+	  document.getElementById('examplePanel4').style.zIndex= 1000;
+	  document.getElementById('exampleHeader5').style.zIndex = 1;
+	  document.getElementById('examplePanel5').style.zIndex= 1000;
+	  document.getElementById('exampleHeader6').style.zIndex = 1;
+	  document.getElementById('examplePanel6').style.zIndex= 1000;
+	   document.getElementById('exampleHeader7').style.zIndex = 1;
+	  document.getElementById('examplePanel7').style.zIndex= 1000;
+	   document.getElementById('exampleHeader8').style.zIndex = 1;
+	  document.getElementById('examplePanel8').style.zIndex= 1000;
+	   document.getElementById('exampleHeader9').style.zIndex = 1;
+	  document.getElementById('examplePanel9').style.zIndex= 1000;
+	  document.getElementById('exampleHeader21').style.zIndex = 1;
+	  document.getElementById('examplePane21').style.zIndex= 1000;
+	  document.getElementById('exampleHeader23').style.zIndex = 1;
+	  document.getElementById('examplePane23').style.zIndex= 1000;
+	  document.getElementById('exampleHeader24').style.zIndex = 1;
+	  document.getElementById('examplePane24').style.zIndex= 1000;
+	  document.getElementById('exampleHeader25').style.zIndex = 1;
+	  document.getElementById('examplePane25').style.zIndex= 1000;
+	  document.getElementById('exampleHeader26').style.zIndex = 1;
+	  document.getElementById('examplePane26').style.zIndex= 1000;
+	  document.getElementById('exampleHeader27').style.zIndex = 1;
+	  document.getElementById('examplePane27').style.zIndex= 1000;
+	  document.getElementById('exampleHeader28').style.zIndex = 1;
+	  document.getElementById('examplePane28').style.zIndex= 1000;
+	  document.getElementById('exampleHeader29').style.zIndex = 1;
+	  document.getElementById('examplePane29').style.zIndex= 1000;
+	  document.getElementById('exampleHeader30').style.zIndex = 1;
+	  document.getElementById('examplePane30').style.zIndex= 1000;
+	  document.getElementById('exampleHeader31').style.zIndex = 1;
+	  document.getElementById('examplePane31').style.zIndex= 1000;
+	  document.getElementById('exampleHeader32').style.zIndex = 1;
+	  document.getElementById('examplePane32').style.zIndex= 1000;
+	 // alert (document.getElementById('exampleHeader2').style.zIndex);
+      animate(elementId, 0, 30, 270, 400, 50, null);
+      element.down = true;
+      element.up = false;
+      headerElement.innerHTML = '';
+	  
+   }
+}
+ function hide(){
+	
+	 animate("examplePanel2", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel3", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel4", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel5", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel6", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel7", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel8", 0, 30, 0, 400, 50, null);
+	 animate("examplePanel9", 0, 30, 0, 400, 50, null);
+	 animate("examplePane21", 0, 30, 0, 400, 50, null);
+	 animate("examplePane23", 0, 30, 0, 400, 50, null);
+	 animate("examplePane24", 0, 30, 0, 400, 50, null);
+	 animate("examplePane25", 0, 30, 0, 400, 50, null);
+	 animate("examplePane26", 0, 30, 0, 400, 50, null);
+	 animate("examplePane27", 0, 30, 0, 400, 50, null);
+	 animate("examplePane28", 0, 30, 0, 400, 50, null);
+	 animate("examplePane29", 0, 30, 0, 400, 50, null);
+	 animate("examplePane30", 0, 30, 0, 400, 50, null);
+	 animate("examplePane31", 0, 30, 0, 400, 50, null);
+	 animate("examplePane32", 0, 30, 0, 400, 50, null);
+	
+      //element.up = true;
+     // element.down = false;
+      document.getElementById("exampleHeader2").innerHTML = '<img src="images/menuopen.png">';
+	  
+	  document.getElementById("exampleHeader3").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader4").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader5").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader6").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader7").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader8").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader9").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader21").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader23").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader24").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader25").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader26").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader27").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader28").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader29").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader30").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader31").innerHTML = '<img src="images/menuopen.png">';
+	  document.getElementById("exampleHeader32").innerHTML = '<img src="images/menuopen.png">';
+	 
+	  
+	 }
+</script>
+  <script type="text/javascript">
+ function initialize(){
+  showLoading();
+	setTimeout(function(){
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 2,
+      center: new google.maps.LatLng(requestorLatitude, requestorLongitude),
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+	  
+    });
+
+    var infowindow = new google.maps.InfoWindow();
+
+    var marker, i;
+
+    for (i = 0; i < dis.length; i++) {  
+   
+	
+	var image = 'images/gicon.png';
+	
+	
+	  marker = new google.maps.Marker({
+		
+        position: new google.maps.LatLng(dis[i].latitude, dis[i].longitude),
+	    map: map,
+		icon: image
+      });
+	
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent(dis[i].contact_name);
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+	  
+	  
+    }
+	var image = 'images/marker.png';
+	
+	marker = new google.maps.Marker({
+		
+        position: new google.maps.LatLng(requestorLatitude, requestorLongitude),
+	    map: map,
+		icon: image
+      });
+	
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+          infowindow.setContent("Your's Location");
+          infowindow.open(map, marker);
+        }
+      })(marker, i));
+	  
+	 
+	  for(var i=0; (i<dis.length)&&(i<3); i++)
+	{
+		var txt = new String(dis[i].distance);
+		 var dist = txt.substr(0,6)
+		document.getElementById('con'+i).style.display = 'block';
+		
+		
+		$('#name'+i).html(dis[i].contact_name+' - ');
+		$('#distance'+i).html(dist+' Km');
+		$('#info'+i).html('<strong>Address</strong> '+dis[i].street_address+' ,'+dis[i].postal_address+'<br>'+dis[i].state+'<br><strong>Phone No.</strong> '+dis[i].contact_phone);
+		
+	}
+	
+	window.location = "#searchResults";
+ 	 hideLoading();
+	  },2000);
+ }
+ 
+ 
+ function display(){
+	if($('#hid').css('display') == 'none'){ 
+   $('#hid').show('fast'); 
+	} else { 
+	
+   $('#hid').hide('fast'); 
+   
+	}
+	 }
+	 
+	 
+	 
+ function disinfo0(){
+	if($('#info0').css('display') == 'none'){ 
+   $('#info0').show('fast'); 
+	} else { 
+	
+   $('#info0').hide('fast'); 
+   
+	}
+ }
+ function disinfo1(){
+	if($('#info1').css('display') == 'none'){ 
+   $('#info1').show('fast'); 
+	} else { 
+	
+   $('#info1').hide('fast'); 
+   
+	}
+ }
+ function disinfo2(){
+	if($('#info2').css('display') == 'none'){ 
+   $('#info2').show('fast'); 
+	} else { 
+	
+   $('#info2').hide('fast'); 
+   
+	}
+	 }
+	 
+	 
+function setSettings(){
+	//alert('hello');
+	$("#tune").val( dis8[0].tune ).attr('selected',true);
+	$("#volume").val( dis8[0].volume ).attr('selected',true);
+	if(dis8[0].lead_notification==0)
+	{
+		$('#checkbox-1').removeAttr('checked');
+	
+	}
+	if(dis8[0].appointment_alarms==0)
+	{
+		$('#checkbox-2').removeAttr('checked');
+	
+	}
+	if(dis8[0].battery_saver_mode==1)
+	{
+		$('#checkbox-3').attr('checked','checked');
+		
+	
+	}
+	window.location="#dashboard";
+  
+	}
+
+
+function showLeads(){
+		//alert(dis9.length);
+	 //document.getElementById('leadsList').innerHTML = '';
+	
+	$('#leadsList').html('');
+	 
+	  for(var i=0; i<dis9.length; i++)
+	{
+		if(dis9[i].personal=='Yes')
+		{
+			var headingcolor = '<font color="#990000">';
+			var imagepath = 'images/personal.png';
+			var headingred = '<font color="#990000"> YOUVE BEEN SENT A PERSONAL</font><br>Call Back Request<br>';
+			}
+		else
+		{
+			var headingcolor = '<font color="#00b0f0">';
+			var imagepath = 'images/call.png';
+			var headingred = 'Call Back Request<br>';
+			}
+		
+		
+       $('#leadsList').append('<div data-role="collapsible" style="margin-bottom:5px;" class="ui-collapsible ui-collapsible-collapsed" id="test2"><h3 class="ui-collapsible-heading" id="con0"><img src="'+imagepath+'" style="margin-left:-13%"><a href="#" class="ui-corner-top" style="text-decoration:none;margin-left:9%;" data-theme="c">'+headingcolor+dis9[i].keyword+'&nbsp;in&nbsp;'+dis9[i].location+'</font></a></h3><p align="left">'+headingred+'<strong>Received</strong>&nbsp;'+dis9[i].date+'&nbsp;<strong>at</strong>&nbsp;'+dis9[i].time+'<br><table align="center" width="70%" class="accept'+i+'"><tr><td width="50%"><img src="images/button_accept.png" onClick="replacetable(this.id)" id="accept'+i+'"></td><td width="50%"><img src="images/button_decline.png" onClick="decline(this.id)" id="reject'+i+'"></td></tr></table></p></div>');
+             
+       
+      
+		
+		
+	}
+	$('#leadsList').find('div[data-role=collapsible]').collapsible();  
+	
+ 	 hideLoading();
+	}
+  	
+		
+	
+	
+	
+	
+	
+	function showAppointments(){
+		//alert(dis9.length);
+	 //document.getElementById('leadsList').innerHTML = '';
+	
+	$('#appointmentsList').html('');
+	 
+	  for(var i=0; i<dis11.length; i++)
+	{
+				
+       $('#appointmentsList').append('<div data-role="collapsible" style="margin-bottom:5px;" class="ui-collapsible ui-collapsible-collapsed"><h3 class="ui-collapsible-heading" style="margin-left:-3%;"><font color="#00b0f0">'+dis11[i].aap_date+'&nbsp;,&nbsp;'+dis11[i].aap_time+'</font></h3><p align="left">'+dis11[i].description+'<br><table align="center" width="100%" class="rem'+i+'"  style="margin-bottom:-5px;"><tr><td width="44px;" style="vertical-align:central"><img src="images/alarm_clock.png" id="rem'+i+'"></td><td align="left" style="vertical-align:central;"><strong><font color="#00b0f0" style="margin-left:-50%;">Reminder On</font></strong></td></tr><tr><td><img src="images/delete.png" onClick="deleteReminder('+dis11[i].user_id+','+dis11[i].rem_id+')" id="rem_delete'+i+'"></td><td><img src="images/edit.png" onClick="getEditReminder('+dis11[i].user_id+','+dis11[i].rem_id+')" id="rem_edit'+i+'"></td></tr></table></p></div>');
+             
+       
+      
+		
+		
+	}
+	$('#appointmentsList').find('div[data-role=collapsible]').collapsible();  
+	
+ 	 hideLoading();
+	}
+  	
+	
+	
+	
+	function showEditReminder1(){
+		//alert('inside showedit reminder');
+		$("#edit_appointmentdate1").val(dis12[0].aap_date);
+		$("#edit_reminderdate1").val(dis12[0].rem_date);
+		$("#edit_app_appointment").val(dis12[0].appointment);
+		$("#edit_app_notes").val(dis12[0].description);
+		hideLoading();
+		window.location = '#appointmentEdit';
+		 
+		
+	
+ 	
+	}
+  	
+	
+		
+  </script>
+  </head>
+  <body background="images/bg.png">
+<div id="loading-image" style="display:none"> <img src="images/292.gif" alt="Loading..." /> </div>
+<div data-role="page" class="type-interior" data-theme="c" id="search" > 
+    
+    <!-- /header --> 
+    
+    <!--/content-primary -->
+    <div id="logo" style="background:url(images/logo_slip.png); background-repeat:no-repeat;min-height:261px;min-width:275px;margin-top:2%" >
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+        <div id="exampleHeader2" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel2', this);"> <img src="images/menuopen.png"> </div>
+        <div id="examplePanel2" style="position:absolute; width:0px;height:90%;top:50px; left:1px;  overflow:hidden;">
+        <div >
+            <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" data-transition="slide" id="searchlink0" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li style="background-color:#00b0f0;" id="li2"> <a id="searchlink1" href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li id="li3"> <a href="#register" onClick="hide()" data-transition="slide" id="searchlink2"  style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li id="li4"><a href="#how" onClick="hide()" data-transition="slide" id="searchlink3" style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li id="li5"><a href="#faq" onClick="hide()"  data-transition="slide" id="searchlink4" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li id="li6"> <a href="#contact" onClick="hide()" data-transition="slide" id="searchlink5" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+          </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+      </div>
+    <div data-role="content" align="center">
+        <form action="" method=""  style="margin-top:90%;" name="searchForm" >
+        <table cellspacing="0px;">
+  <tr>
+    <td colspan="2"> <input type="text" name="service" id="service-c" value="" placeholder="Service" style="width:234px;background:url(images/search_service.png) no-repeat;height:86px;border:none;padding-left:23px;padding-right:23px; font-size:30px" class="" data-role="none" autocomplete="off"></td>
+    
+  </tr>
+  <tr>
+    <td>  <input type="text" name="location" id="location" value="" data-inline="true" class=" ui-corner-left " style="z-index:1;display:inline;background:url(images/search_location.png) no-repeat;height:95px;border:none;width:155px;padding-left:23px;padding-right:23px; font-size:30px;margin-top:2%;z-index:1" placeholder="Location" data-role="none" autocomplete="off"/></td>
+    <td><img src="images/button_search.png" data-inline="true" style="z-index:1000" onClick="validate()" ></td>
+  </tr>
+</table>
+
+       
+      
+        
+      </form>
+      </div>
+  </div>
+  </div>
+<!-- /content --> 
+
+<!-- /page --> 
+
+<!--sign in -->
+<div id="signIn" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader3" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel3', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel3" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register" onClick="hide()" data-transition="slide"   style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq" onClick="hide()"  data-transition="slide" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" onClick="hide()" data-transition="slide" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:20%"> <img src="images/signin.png"> </div>
+    <div id="signinForm" style="margin-top:9%;" align="center" >
+    <form name="loginForm">
+        <input type="text" name="username" value="" placeholder="Userame" style="width:80%;margin-bottom:1%;height:35px;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 12px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off" >
+        <br>
+        <input type="password" name="password" value="" placeholder="Password" style="width:80%;margin-bottom:1%;height:35px;background-image: url(images/pass.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 12px;padding-left: 30px;text-shadow:none;box-shadow:none;-webkit-box-shadow:none;-moz-box-shadow:none;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off" >
+        <p><a href="#"><img src="images/signinbutton.png" onClick="login()"></a></p>
+      </form>
+  </div>
+  </div>
+
+<!--/sign in end--> 
+
+<!--register-->
+<div id="register" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader4" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel4', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel4" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register" data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:20%"> <img src="images/register.png"> </div>
+    <div id="registerdetails" style="margin-top:5%;padding-left:2%;padding-right:2%" align="center" >
+    <form>
+        <p align="justify" style="margin-left:16px;margin-right:16px;margin-bottom:5%">You will be directed to the website to continue registration. Once your registration is complete you will be redirected back to here. </p>
+        <p align="center"><a href="https://getserviced.com.au/signup"><img src="images/button_register.png"></a></p>
+      </form>
+  </div>
+  </div>
+
+<!--/ register--> 
+
+<!--how it works-->
+
+<div id="how" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader5" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel5', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel5" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:20%"> <img src="images/how.png"> </div>
+    <div id="registerdetails" style="margin-top:10%;padding-left:2%;padding-right:2%" align="center" >
+    <video width="300" height="220" controls>
+  <source src="psd/Get_Serviced.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+<source src="psd/Get_Serviced.ogg" type='video/ogg; codecs="theora, vorbis"'>
+</video>
+   
+  </div>
+  </div>
+
+<!--/ how it works--> 
+
+<!-- faq-->
+
+<div id="faq" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader6" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel6', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel6" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register" onClick="hide()"  data-transition="slide" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:10%"> <img src="images/faq.png"> </div>
+    <div id="registerdetails" style="margin-top:5%;padding-left:2%;padding-right:2%" align="center" > <img src="images/how_does.png" id="fimg1" />
+    <p id="faq1" style="margin-left:2%;margin-right:2%;padding-left:2%;padding-right:2%;margin-top:-2%; display:none" align="justify">Get Serviced works a little bit like a Taxi service as we broadcast your request over our network of providers and the first to become available will call you back or email you quotes.</p>
+    <script>
+   $('#fimg1').click(function () {
+      $("#faq1").slideToggle("fast");
+    });
+	</script> 
+    <img src="images/benefits.png" id="fimg2" />
+    <p id="faq2" style="margin-left:2%;margin-right:2%;margin-top:-2%;padding-left:2%;padding-right:2%;display:none" align="justify">The benefit of finding a service provider this way is that you will find someone local which means costs should be lower and you will also have people that are available to take on new work contact you to compete for your business.</p>
+    <script>
+	 $('#fimg2').click(function () {
+      $("#faq2").slideToggle("fast");
+    });
+	</script> 
+    <img src="images/can.png" id="fimg3" />
+    <p id="faq3" style="margin-left:2%;margin-top:-2%; margin-right:2%;padding-left:2%;padding-right:2%;display:none" align="justify">Yes you can.Get Serviced is a Call Back and a Compare Quotes Service combined which gives you the choice of finding suitable providers the way you want.</p>
+    <script> 
+	 $('#fimg3').click(function () {
+      $("#faq3").slideToggle("fast");
+    });
+	</script> 
+    <img src="images/ho_many.png" id="fimg4" />
+    <p id="faq4" style="margin-left:2%;margin-top:-2%; margin-right:2%;padding-left:2%;padding-right:2%;display:none" align="justify">Our first available call back system will get you 3 quotes as this is a good average to compare what you will be getting. You can get as many specific call back requests as you like by simply posting your name and number to all the individual businesses.</p>
+    <script>
+	 $('#fimg4').click(function () {
+      $("#faq4").slideToggle("fast");
+    });
+	</script> 
+    <img src="images/can_do.png" id="fimg5" />
+    <p id="faq5" style="margin-left:2%;margin-top:-2%; margin-right:2%;padding-left:2%;padding-right:2%;display:none" align="justify">You can do it as many times as you like - in fact we encourage you to get as many quotes as you feel you need. It is always better to make an informed decision and be sure that the provider you have chosen is the best for the job.</p>
+    <script>
+	 $('#fimg5').click(function () {
+      $("#faq5").slideToggle("fast");
+    });
+	
+	</script> 
+    <img src="images/how_long.png" id="fimg6" />
+    <p id="faq6" style="margin-left:2%;margin-top:-2%; margin-right:2%;padding-left:2%;padding-right:2%;display:none" align="justify">Our system is instant. As soon as you hit the send button - our SmartPhone App notifies all local providers instantly so as long as they are logged into the App they will get the request as soon as you post it.</p>
+    <script>
+	  $('#fimg6').click(function() {
+        if ($('#faq6').css('display') === 'none') {
+            $('#faq6').show();
+            var scrollY = $('body').scrollTop()?$('body').scrollTop():$('html').scrollTop();
+            $('html, body').animate({
+                scrollTop: scrollY + $('#fimg6').outerHeight()
+            }, 'medium');
+        } else {
+            $('#fimg6').html('Expand');
+            $('#faq6').slideUp('medium');
+        }
+        return false;
+    });
+	
+</script> 
+  </div>
+  </div>
+
+<!--/ faq--> 
+
+<!--contact-->
+<div id="contact" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader7" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel7', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel7" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:10%"> <img src="images/contact.png"> </div>
+    <div id="registerdetails" style="margin-top:5%;" align="center" >
+    <form name="contact">
+        <input type="text" name="name" value="" placeholder="Name" style="width:85%;margin-bottom:3%;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off">
+        <input type="email" name="email" value="" placeholder="Email" style="width:85%;margin-bottom:3%;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off">
+        <input type="text" name="subject" value="" placeholder="Subject" style="width:85%;margin-bottom:3%;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off">
+        <textarea placeholder="Message" cols="20" rows="40" name="message" style="width:85%;margin-bottom:3%;height:60px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off" ></textarea>
+        <img src="images/button_send_wide.png">
+      </form>
+  </div>
+  </div>
+<!--/ contact--> 
+
+<!--/*options*/-->
+
+<div id="options" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader8" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel8', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel8" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide" id="optionslink1" style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register"  data-transition="slide" onClick="hide()" id="optionslink2" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()" id="optionslink3"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" id="optionslink4" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" id="optionslink5" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="img1" style="margin-top:20%;padding-left:1%;padding-right:1%" align="center" > <a href=""><img src="images/get_call.png" onClick="initialize()"></a></div>
+    <div id="img2" style="margin-top:1%;padding-left:1%;padding-right:1%" align="center" > <a href="#getQuotes"><img src="images/get_emailed.png"></a></div>
+  </div>
+
+<!--/options--> 
+
+<!-- get QUOTES-->
+
+<div id="getQuotes" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader9" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePanel9', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePanel9" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide" id="getQuoteslink1" style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register"  data-transition="slide" onClick="hide()" id="getQuoteslink2" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()" id="getQuoteslink3"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" id="getQuoteslink4" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" id="getQuoteslink5" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:10%"> <img src="images/get_quotes.png"> </div>
+    <div id="registerdetails" style="margin-top:10%;margin-left:2%;margin-right:2%" align="center" >
+    <form name="contact" >
+        <input type="text" name="name" value="" placeholder="Name" style="width:85%;margin-bottom:3%;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off">
+        <input type="email" name="email" value="" placeholder="Email" style="width:85%;margin-bottom:3%;background-image: url(images/E-Mail.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 10px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off">
+        <textarea placeholder="Job Description" cols="20" rows="40" name="message" style="width:85%;margin-bottom:3%; background-image: url(images/Writing.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 10px;padding-left: 30px;min-height:100px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off" ></textarea>
+        <div id="scenari-btn-living" class="ui-btn ui-btn-inline"  style="top:-20px;float:left" >
+        <select id="select-scenari"  name="select-choice-6" id="select-choice-6" data-native-menu="false" tabindex="-1" data-inline="true">
+        <option value="choose-one" data-placeholder="true">Quotes No</option>
+        <option value="standard">5</option>
+        <option value="rush">3</option>
+        <option value="express">2</option>
+        <option value="overnight">1</option>
+        </select>
+      </div>
+        <img src="images/button_send.png" style="float:right;width:103px;height:50px;">
+      </form>
+  </div>
+  </div>
+
+<!-- / get QUOTES--> 
+
+<!--search results-->
+
+<div id="searchResults" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader21" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane21', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane21" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide" id="resultslink1" style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register"  data-transition="slide" onClick="hide()" id="resultslink2" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()" id="resultslink3"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" id="resultslink4" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" id="resultslink5" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="img1" style="margin-top:10%;margin-left:10px;margin-right:10px;" align="center" > <a href=""><img src="images/first.png" onClick="display()"></a></div>
+    <div id="hid" style="display:none;width:300px;background:url(images/22.png) no-repeat;min-height:108px; margin-top:-3%;margin-left:6%;padding-top:18px;" align="center" >
+    <form style="margin-left:4%" name="submit3">
+        <table>
+       
+        <tr>
+            <td><input type="text" name="name" value="" placeholder="Name" style="width:80%;margin-bottom:1%;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off" ></td>
+            <td rowspan="2" style="text-align:left"><img src="images/b.png" height="87px" onClick="sub3()"></td>
+          </tr>
+        <tr>
+            <td width="60%"><input  type='number' name="phone" value="" placeholder="Phone" style="width:80%;margin-bottom:1%;background-image: url(images/tele.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" maxlength="10" autocomplete="off" maxlength="10"></td>
+          </tr>
+      </table>
+      </form>
+  </div>
+    <div id="map" style="height:150px;margin-top:3%;margin-left:2%;margin-right:2%;" align="center"></div>
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="all_info" style="margin-left:10px;margin-right:10px;" data-iconpos="right">
+    <div data-role="collapsible" style="margin-bottom:5px;">
+        <h3 class="ui-collapsible-heading" id="con0" style="display:none" > <a href="#"  class="ui-collapsible-heading-toggle  ui-corner-top " data-theme="c" style="text-decoration:none;"><span class="ui-corner-top"><span class="ui-btn-text" id="name0" style="margin-left:-5%"><span class="ui-collapsible-heading-status"> click to collapse contents</span></span><span style="text-align:right;margin-right:8%;float:right" id="distance0"></span></span></a></h3>
+        <p>
+      <form style="margin-top:-5%; margin-bottom:-6%" name="submit0">
+        <table>
+         <tr><td colspan="2" align="left"><strong><font color="#00b0f0">Get a call back...</font></strong></td></tr>
+          <tr>
+            <td><input type="text" name="name" value="" placeholder="Name" style="width:80%;margin-bottom:1%;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off"></td>
+            <td rowspan="2" style="text-align:left"><img src="images/b.png" height="87px" onClick="sub0()"></td>
+          </tr>
+          <tr>
+            <td width="60%"><input  type='number' name="phone" value="" placeholder="Phone" style="width:80%;margin-bottom:1%;background-image: url(images/tele.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" maxlength="10" autocomplete="off"></td>
+          </tr>
+        </table>
+      </form>
+        <p align="left" style="margin-bottom:-1%"><a href="" onClick="disinfo0()"><font color="#000000" size="-1">View Details</font></a></p>
+        <div id="info0" style="display:none"></div>
+        </p>
+      </div>
+    <div data-role="collapsible"  style="margin-bottom:5px;">
+        <h3 class="ui-collapsible-heading" id="con1" style="display:none"> <a href="#"  class="ui-collapsible-heading-toggle  ui-corner-top " data-theme="c" style="text-decoration:none;"><span class="ui-corner-top"><span class="ui-btn-text" id="name1" style="margin-left:-5%"><span class="ui-collapsible-heading-status"> click to collapse contents</span></span><span style="text-align:right;margin-right:8%;float:right" id="distance1"></span></span></a></h3>
+        <p>
+      <form style="margin-top:-5%; margin-bottom:-6%" name="submit1">
+        <table>
+           <tr><td colspan="2" align="left"><strong><font color="#00b0f0">Get a call back...</font></strong></td></tr>
+          <tr>
+            <td><input type="text" name="name" value="" placeholder="Name" style="width:80%;margin-bottom:1%;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off"></td>
+            <td rowspan="2" style="text-align:left"><img src="images/b.png" height="87px" onClick="sub1()"></td>
+          </tr>
+          <tr>
+            <td width="60%"><input  type='number' name="phone" value="" placeholder="Phone" style="width:80%;margin-bottom:1%;background-image: url(images/tele.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" maxlength="10" autocomplete="off"></td>
+          </tr>
+        </table>
+      </form>
+        <p align="left" style="margin-bottom:-1%"><a href="" onClick="disinfo1()" ><font color="#000000" size="-1">View Details</font></a></p>
+        <div id="info1" style="display:none"></div>
+        </p>
+      </div>
+    <div data-role="collapsible"  style="margin-bottom:5px;">
+        <h3 class="ui-collapsible-heading" id="con2" style="display:none"> <a href="#"  class="ui-collapsible-heading-toggle  ui-corner-top " data-theme="c" style="text-decoration:none;"><span class="ui-corner-top"><span class="ui-btn-text"  id="name2" style="margin-left:-5%"><span class="ui-collapsible-heading-status"> click to collapse contents</span></span><span style="text-align:right;margin-right:8%;float:right" id="distance2"></span></span></a></h3>
+        <p>
+      <form style="margin-top:-5%; margin-bottom:-6%" name="submit2">
+        <table>
+         <tr><td colspan="2" align="left"><strong><font color="#00b0f0">Get a call back...</font></strong></td></tr>
+          <tr>
+            <td><input type="text" name="name" value="" placeholder="Name" style="width:80%;margin-bottom:1%;background-image: url(images/contacti.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off"></td>
+            <td rowspan="2" style="text-align:left"><img src="images/b.png" height="87px" onClick="sub2()"></td>
+          </tr>
+          <tr>
+            <td width="60%"><input  type='number' name="phone" value="" placeholder="Phone" style="width:80%;margin-bottom:1%;background-image: url(images/tele.png);background-repeat: no-repeat;background-position-x: 8px;background-position-y: 8px;padding-left: 30px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow ui-input-text ui-body-c ui-corner-all" autocomplete="off"></td>
+          </tr>
+        </table>
+      </form>
+        <p align="left" style="margin-bottom:-1%"><a href="" onClick="disinfo2()" ><font color="#000000" size="-1">View Details</font></a></p>
+        <div  id="info2" style="display:none"></div>
+        </p>
+      </div>
+  </div>
+  </div>
+<!--/ search results--> 
+
+<!--Success Message-->
+
+<div id="success" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader23" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane23', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane23" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:signIn()" onClick="hide()" data-transition="slide" id="successlink1" style="background-color:#00b0f0;">SIGN IN</a> </li>
+            <li> <a href="#register" data-transition="slide" onClick="hide()" id="successlink2" style="background-color:#00b0f0;">REGISTER YOUR BUSINESS</a></li>
+            <li><a href="#how" data-transition="slide" onClick="hide()" id="successlink3"  style="background-color:#00b0f0;">HOW IT WORKS</a></li>
+            <li><a href="#faq"  data-transition="slide" onClick="hide()" id="successlink4" style="background-color:#00b0f0;">F.A.Q.</a></li>
+            <li> <a href="#contact" data-transition="slide" onClick="hide()" id="successlink5" class="ui-corner-bottom"  style="background-color:#00b0f0;">CONTACT </a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:20%"> <img src="images/success.png"> </div>
+    <div id="registerdetails" style="margin-top:10%;padding-left:2%;padding-right:2%" align="center" >
+    <div align="center">
+        <p align="justify" style="margin-left:23px;margin-right:23px;">Your request has been submitted successfully and all relevant providers that service your area have been notified and you should start to receive quotes soon.</p>
+        <p><a href="#search"><img src="images/searchAgain.png"></a></p>
+      </div>
+  </div>
+  </div>
+
+<!-- / Success Message ends--> 
+
+<!--dashboard-->
+
+<div id="dashboard" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader24" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane24', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane24" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a></li>
+            <li id="test"> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;" id="test2">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings" onClick="hide()"  data-transition="slide" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" onClick="hide()" data-transition="slide" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:15%"> <img src="images/dashboard.png"> </div>
+    <div id="registerdetails" style="margin-top:5%;padding-left:2%;padding-right:2%;margin-left:2%;margin-right:2%" align="center" >
+           <p align="justify" style="margin-left:16px;margin-right:16px;">When you are logged into your account you will notice that you have a different set of options in the menu. <br>
+        <br>
+        To go back to the previous set of Menu options simply go:<br>
+        <br>
+        MENU &#8594; SEARCH &#8594; MENU<br>
+        <br>
+        To return to your dashboard at any time just go:<br>
+        <br>
+        MENU &#8594; SIGN-IN </p>
+     
+  </div>
+  </div>
+
+<!--/ dashboard--> 
+
+<!--Logout-->
+<div id="logout" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader25" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane25', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane25" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:20%"> <img src="images/logout.png"> </div>
+    <div id="registerdetails" style="margin-top:5%;padding-left:2%;padding-right:2%;margin-left:2%;margin-right:2%" align="center" >
+    <p align="justify" style="margin-left:16px;margin-right:16px;">If you log out you will not receive any real time leads and notifications from Get Serviced and you will have to sign in again to  your re-activate your account.<br>
+        <br>
+        Exit will allow Get Serviced to run in the background and you will still receive Leads. </p>
+    <table width="100%">
+        <tr>
+        <td><a href="javascript:logout()"><img src="images/logoutbutton.png"></a></td>
+        <td>&nbsp;</td>
+      </tr>
+      </table>
+  </div>
+  </div>
+<!--/ logout--> 
+
+<!--help-->
+
+<div id="help" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader26" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane26', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane26" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="#" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:12%"> <img src="images/gethelp.png">
+     <img src="images/help_how.png" id="imghelp1">
+     <p id="help1" style="margin-left:2%;margin-right:2%;padding-left:2%;padding-right:2%;margin-top:-2%; display:none" align="justify">When you are logged into the App it is a direct link to your online account which allows you to manage your leads on the go.</p>
+    <script>
+   $('#imghelp1').click(function () {
+      $("#help1").slideToggle("fast");
+    });
+	</script> 
+     <img src="images/app_guide.png" id="imghelp2">
+      <p id="help2" style="margin-left:2%;margin-right:2%;padding-left:2%;padding-right:2%;margin-top:-2%; display:none" align="justify">You can access the App guide by logging into your master account through a normal internet browser and you will find it located in the Get Help section.</p>
+    <script>
+   $('#imghelp2').click(function () {
+      $("#help2").slideToggle("fast");
+    });
+	</script> 
+     <img src="images/change_tones.png" id="imghelp3"> 
+      <p id="help3" style="margin-left:2%;margin-right:2%;padding-left:2%;padding-right:2%;margin-top:-2%; display:none" align="justify">You can change your alert tone in the Settings option when logged into your account. Here you will find different settings options to customize your experience.</p>
+    <script>
+   $('#imghelp3').click(function () {
+      $("#help3").slideToggle("fast");
+    });
+	</script> 
+     <img src="images/battery_saver.png" id="imghelp4">
+      <p id="help4" style="margin-left:2%;margin-right:2%;padding-left:2%;padding-right:2%;margin-top:-2%; display:none" align="justify">The Battery saver mode will check back with the database less frequently meaning you can save battery power. However, if you use this option you will not always receive real time leads.</p>
+    <script>
+   $('#imghelp4').click(function () {
+      $("#help4").slideToggle("fast");
+    });
+	</script> 
+     <a href="#contact"><img src="images/didnthelp.png"></a> 
+     </div>
+  </div>
+
+<!--/ help--> 
+
+<!--settings-->
+
+<div id="settings" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader27" style="position:absolute;width:92px;height:68px;top:30px;left:0px;      text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane27', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane27" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:9%"> <img src="images/settings.png" width="300px"></div>
+    <div id="registerdetails" style="margin-top:-9%;padding-left:2%;padding-right:2%;margin-left:2%;margin-right:2%" align="center" >
+    <div data-role="fieldcontain">
+    <form name="settingsForm">
+        <fieldset data-role="controlgroup">
+        <input type="checkbox" name="notification" id="checkbox-1" class="custom" checked  style="background:#f5f5f5"/>
+        <label for="checkbox-1" class="ui-btn-icon-right" data-iconpos="right"><font color="#00b0f0"><em>Lead Notification </em></font></label>
+      </fieldset>
+        <fieldset data-role="controlgroup">
+        <ul data-role="listview" data-inset="true">
+            <li data-inline="true"   data-icon="false" style="background:#f8f8f8;line-height:20px;margin-top:-4%" ><font color="#00b0f0" size="3"><em>&nbsp;&nbsp;<strong>Tune</strong></em></font>
+            <select id="tune" tabindex="-1" data-inline="true" style="width:40%;z-index:200;margin-left:40%;background:url(images/ss.png) no-repeat;border:none;height:25px;padding-left:5px;margin-top:-2%;margin-bottom:-2%"   data-role="none" name="tune">
+                <option value="CASH">CASH</option>
+                <option value="BREAK">BREAK</option>
+                <option value="POP">POP</option>
+                <option value="ROCK">ROCK</option>
+              </select>
+          </li>
+          </ul>
+      </fieldset>
+        <fieldset data-role="controlgroup" style="margin-top:-4%">
+        <input type="checkbox" name="alarm" id="checkbox-2" class="custom" checked  style="background:#f5f5f5"/>
+        <label for="checkbox-2" class="ui-btn-icon-right" data-iconpos="right"><font color="#00b0f0"><em>Appointment Alarms </em></font></label>
+      </fieldset>
+        <fieldset data-role="controlgroup" style="margin-top:-4%">
+        <input type="checkbox" name="battery_saver" id="checkbox-3" class="custom"  style="background:#f5f5f5"/>
+        <label for="checkbox-3" class="ui-btn-icon-right" data-iconpos="right"><font color="#00b0f0"><em>Battery Saver Mode </em></font></label>
+      </fieldset>
+        <fieldset data-role="controlgroup" style="margin-top:-4%">
+        <ul data-role="listview" data-inset="true">
+            <li data-inline="true"   data-icon="false" style="background:#f8f8f8;line-height:20px;" ><font color="#00b0f0" size="3"><em>&nbsp;&nbsp;<strong>Volume</strong></em></font>
+            <select id="volume" tabindex="-1" data-inline="true" style="width:40%;z-index:200;margin-left:32%;background:url(images/ss.png) no-repeat;border:none;height:25px;padding-left:5px;margin-top:-2%;margin-bottom:-2%"   data-role="none" name="volume">
+                <option value="10">10</option>
+                <option value="8">8</option>
+                <option value="6">6</option>
+                <option value="4">4</option>
+                <option value="2">2</option>
+                <option value="0">0</option>
+              </select>
+          </li>
+          </ul>
+      </fieldset></form>
+        <img src="images/button_save.png" width="300px;" onClick="saveSettings()"> </div>
+  </div>
+  </div>
+<!--/settings--> 
+
+<!-- latest leads-->
+
+<div id="latestLeads" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader28" style="position:absolute;width:92px;height:68px;top:30px;left:0px;text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane28', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane28" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:5%"> <img src="images/leads.png"></div>
+    <div id="contentleads" style="margin-top:2%;padding-left:2%;padding-right:2%;margin-left:2%;margin-right:2%" align="center" >
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="leadsList" style="margin-left:10px;margin-right:10px;"></div>
+  </div>
+  </div>
+
+<!--<!-- / lateset leads--> 
+
+<!-- book it in-->
+
+<div id="bookitIn" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader29" style="position:absolute;width:92px;height:68px;top:30px;left:0px;text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane29', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane29" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:9%"> <img src="images/book.png"> </div>
+    <div id="titleImage" align="center" style="margin-top:2%;margin-left:11%;margin-right:11%;text-align:justify;">Would you like to book in an appointment or a reminder to call this person back for a follow up?</div>
+    <div style="margin-top:6%;" align="center" >
+    <p><a href="#"><img src="images/button_appointments.png" onClick="appointmentList()"></a> <a href="#"><img src="images/button_latest_leads.png" onClick="latestLeads()"></a> </p>
+  </div>
+  </div>
+
+<!-- / book it in--> 
+
+<!--myappointments-->
+
+<div id="myAppointment" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader30" style="position:absolute;width:92px;height:68px;top:30px;left:0px;text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane30', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane30" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:8%"> <img src="images/appointments.png"></div>
+    <div id="contentappointments" style="margin-top:2%;padding-left:2%;padding-right:2%;margin-left:2%;margin-right:2%" align="center" > <a href="#newAppointment"><img src="images/button_new_appointment.png"></a>
+    <div data-role="collapsible-set" data-theme="c" data-content-theme="d" id="appointmentsList" style="margin-left:10px;margin-right:10px;"></div>
+  </div>
+  </div>
+
+<!--  / myappointments--> 
+
+<!--new appointment-->
+
+<div id="newAppointment" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader31" style="position:absolute;width:92px;height:68px;top:30px;left:0px;text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane31', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane31" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:8%"> <img src="images/newapp.png"></div>
+    <div id="contentappointments" style="margin-top:2%;margin-left:25px;;margin-right:25px;" align="center" >
+    <form name="appointmentForm">
+      
+        <div id="appointmentdate" class="demos" style="margin-bottom:3%">
+        <input type="text" name="appointmentdate" value="" id="appointmentdate1" onFocus="oncomplete()" placeholder="Date" />
+      </div>
+      
+        <div id="reminderdate" class="demos" style="margin-bottom:3%">
+        <input type="text" name="reminderdate" value="" id="reminderdate1" onFocus="oncompletereminder()" placeholder="Set Reminder"/>
+      </div>
+        <div style="margin-bottom:3%">
+        <input type="text" name="app_appointment" placeholder="Appointment" autocomplete="off"/>
+      </div>
+        <div style="margin-bottom:3%">
+        <textarea placeholder="Message" cols="25" rows="40" name="app_notes" style="margin-bottom:3%;height:60px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow" autocomplete="off"></textarea>
+      </div>
+        <div><img src="images/button_save.png" onClick="newAppointment()"></div>
+      </form>
+  </div>
+  </div>
+
+<!--  / new appointment--> 
+
+<!--edit reminder-->
+<div id="appointmentEdit" data-role="page" style="background:url(images/bg.png) no-repeat;">
+    <div style="position:relative;width:90%;height:90%;top:0px;left:0px;">
+    <div id="exampleHeader32" style="position:absolute;width:92px;height:68px;top:30px;left:0px;text-align:center;color:#FFFFFF;z-index:1000;" onClick="slideExample2('examplePane32', this);"> <img src="images/menuopen.png"> </div>
+    <div id="examplePane32" style="position:absolute; width:0px;height:90%;top:50px; left:40px;  overflow:hidden;z-index:1">
+        <div >
+        <ul data-role="listview" data-inset="true" data-theme="b" style="line-height:40px;" id="menu">
+            <li data-inline="true"> <a href="#search" onClick="hide()" class="ui-corner-top" style="background-color:#00b0f0;" data-inline="true">SEARCH</a> </li>
+            <li> <a href="javascript:latestLeads()" onClick="hide()" data-transition="slide"  style="background-color:#00b0f0;">LATEST LEADS</a> </li>
+            <li> <a href="javascript:appointmentList()" onClick="hide()" data-transition="slide" style="background-color:#00b0f0;">MY APPOINTMENTS</a></li>
+            <li><a href="#help" data-transition="slide" onClick="hide()"  style="background-color:#00b0f0;">F.A.Q. AND HELP</a></li>
+            <li><a href="#settings"  data-transition="slide" onClick="hide()" style="background-color:#00b0f0;">SETTINGS</a></li>
+            <li> <a href="#logout" data-transition="slide" onClick="hide()" class="ui-corner-bottom"  style="background-color:#00b0f0;">LOG-OUT</a> </li>
+          </ul>
+      </div>
+        <div style="z-index:100;top: 0px;position: absolute; width:105px; left:168px;"><img src="images/menuclose.png" onClick="hide()" data-inline="true"></div>
+      </div>
+  </div>
+    <div id="title" align="right" style="width:233px;margin-top:16%;margin-left:18%;"><img src="images/title.png"></div>
+    <div id="titleImage" align="center" style="margin-top:8%"> <img src="images/newapp.png"></div>
+    
+    <div id="contentappointments" style="margin-top:2%;margin-left:25px;;margin-right:25px;" align="center" >
+
+    
+    <form name="editReminderForm">
+               
+               
+					<div id="edit_appointmentdate" class="demos" style="margin-bottom:3%">
+						
+						<input type="text" name="edit_appointmentdate" id="edit_appointmentdate1" value="" onFocus="oncompleteappointmentedit()" placeholder="Date"/>		
+					</div>
+                    <div id="edit_reminderdate" class="demos" style="margin-bottom:3%">
+						
+						<input type="text" name="edit_reminderdate" value="" id="edit_reminderdate1" onFocus="oncompletereminderedit()" placeholder="Set Reminder"/>
+                        
+					</div>
+                    <div style="margin-bottom:3%"><input type="text" name="edit_app_appointment" placeholder="Appointment" id="edit_app_appointment" autocomplete="off"/>		</div>
+                    <div style="margin-bottom:3%"><textarea placeholder="Message" cols="25" rows="40" name="edit_app_notes" id="edit_app_notes" style="margin-bottom:3%;height:60px;" class="ui-shadow-inset ui-btn-corner-all ui-btn-shadow"  autocomplete="off"></textarea></div>
+          
+	<div><img src="images/button_save.png" onClick="editReminder()"></div>
+                
+            </form></div>
+    
+    </div>
+
+<!--  / edit reminder-->
+
+</body>
+</html>

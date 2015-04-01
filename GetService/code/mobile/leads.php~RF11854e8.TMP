@@ -1,0 +1,100 @@
+<?php 
+
+include 'connect.php';
+
+$query = "insert into leads (contact_name,contact_phone,keyword,location,ip_location,counter,status) values ('".mysql_real_escape_string(stripslashes($_GET['name']))."', '".mysql_real_escape_string(stripslashes($_GET['phone']))."' ,'".mysql_real_escape_string(stripslashes($_GET['keyword']))."' , '".mysql_real_escape_string(stripslashes($_GET['city']))."' , '".mysql_real_escape_string(stripslashes($_GET['ip']))."' , '".mysql_real_escape_string(stripslashes('0'))."', '".mysql_real_escape_string(stripslashes('1'))."') " ;	
+
+$result = mysql_query($query);
+
+$query1 = "SELECT * FROM leads Where contact_phone ='".$_GET['phone']."'&& ip_location ='".$_GET['ip']."' ORDER BY id ASC LIMIT 1";
+
+$exe=mysql_query($query1);
+$no=mysql_num_rows($exe);
+$row=mysql_fetch_array($exe);
+
+//header("Content-type: application/json");
+//echo $_GET['arr'];
+//echo $_GET['arr'];
+//$obj = json_decode($_GET['arr']);
+//echo 2;
+//print_r ($obj);
+if(get_magic_quotes_gpc()){
+  $d = stripslashes($_GET['arr']);
+}else{
+  $d = $_GET['arr'];
+}
+$d = json_decode($d,true);
+//print_r($d);
+
+//print_r($d[0][name]);
+
+$size = sizeof($d);
+
+for($i=0; $i<$size; $i++)
+{
+$query2 = "insert into provider_leads (lead_id,provider_id,contact_name,contact_no,accepted_time,status) values ('".mysql_real_escape_string(stripslashes($row['id']))."', '".mysql_real_escape_string(stripslashes($d[$i][id]))."' ,'".mysql_real_escape_string(stripslashes($d[$i][name]))."' , '".mysql_real_escape_string(stripslashes($d[$i][phone]))."' ,'".mysql_real_escape_string('')."' , '".mysql_real_escape_string('0')."') " ;	
+$result1= mysql_query($query2);
+
+
+}
+
+
+   	if($result==1)
+	echo "{success:true}";
+	else
+	echo "{success:false}";
+
+function sendNotification()
+{
+$query11 = "SELECT * FROM settings Where user_id ='".mysql_real_escape_string(stripslashes($d[$i][id]))."' LIMIT 1";
+
+$exe11=mysql_query($query11);
+$no11=mysql_num_rows($exe11);
+$row11=mysql_fetch_array($exe11);
+$deviceToken = $row11['device_token'];
+$uniqueId = '0b9214ea';
+
+$payload['aps'] = array('alert' => 'You have received a New Lead.', 'badge' => 1);
+$payload['server'] = array('UniqueId' => $uniqueId);
+$payload = json_encode($payload);
+echo "After JSON Encode";
+
+//*************************************
+// TESTING ON WEB SERVER
+//*************************************
+$apnsHost = 'gateway.sandbox.push.apple.com';
+$apnsPort = '2195';
+$apnsCert = 'getserviced-final-apns-dev.pem';
+$passPhrase = 'Mindbowser123';
+
+echo "Creating stream object.";
+$streamContext = stream_context_create();
+stream_context_set_option($streamContext, 'ssl', 'local_cert', $apnsCert);
+stream_context_set_option($streamContext, 'ssl', 'passphrase', $passPhrase);
+
+try {
+echo "Trying to open connection";
+
+$apnsConnection = stream_socket_client('ssl://' . $apnsHost . ':' . $apnsPort, $error, $errorString, 60, STREAM_CLIENT_CONNECT, $streamContext);
+
+if (apnsConnection == false) {
+    echo "Failed to connect {$error} {$errorString}\n";
+    print "Failed to connect {$error} {$errorString}\n";
+    return;
+}
+
+echo "construct apnsMessage";
+$apnsMessage = chr(0) . chr(0) . chr(32) . pack('H*', str_replace(' ', '', $deviceToken)) . chr(0) . chr(strlen($payload)) . $payload;
+echo "Message: $apnsMessage<br />\n";
+
+fwrite($apnsConnection, $apnsMessage);
+
+socket_close($apnsConnection);
+fclose($apnsConnection);
+}
+catch(Exception $e) {
+    echo 'Caught exception: '.  $e->getMessage(). "\n";
+}
+}
+
+?>
