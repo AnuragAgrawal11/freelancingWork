@@ -1,0 +1,25 @@
+#demoskin { background:#fff; left:0; padding:12px 12px; position:absolute; top:0; box-shadow:0 0 5px #000; -moz-box-shadow:0 0 5px #000; -webkit-box-shadow:0 0 5px #000; filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=145, Strength=3); }
+#demoskin:hover { text-decoration:none;}
+
+#demoskin_left a{ background:#fff; left:0; padding:12px 12px; position:absolute; top:0; box-shadow:0 0 5px #000; -moz-box-shadow:0 0 5px #000; -webkit-box-shadow:0 0 5px #000; filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=145, Strength=3); }
+#demoskin_left a:hover { text-decoration:none;}
+
+#color_switcher { background:#fff; z-index:1000; left:-100px; position:absolute; top:60px; width:82px; box-shadow:0 0 5px #000; -moz-box-shadow:0 0 5px #000; -webkit-box-shadow:0 0 5px #000; filter: progid:DXImageTransform.Microsoft.Shadow(color='#000000', Direction=145, Strength=3); }
+.skin { display:block; width:50px; height:17px; }
+#skins { margin:10px 0 0 9px;}
+#skins ul li a { margin:5px 8px;}
+#colors { overflow:hidden; margin:0 0 10px 9px;}
+#colors ul li a { margin:5px 8px;}
+.blue { background:url(../../demoskin/img_color/blue.jpg) no-repeat;}
+.coffee, .brown { background:url(../../demoskin/img_color/coffee.jpg) no-repeat;}
+.darkwood, .black { background:url(../../demoskin/img_color/darkwood.jpg) no-repeat;}
+.green { background:url(../../demoskin/img_color/green.jpg) no-repeat;}
+.lightgreen { background:url(../../demoskin/img_color/lightgreen.jpg) no-repeat;}
+.lightwood { background:url(../../demoskin/img_color/lightwood.jpg) no-repeat;}
+.orange { background:url(../../demoskin/img_color/orange.jpg) no-repeat;}
+.pink { background:url(../../demoskin/img_color/pink.jpg) no-repeat;}
+.red { background:url(../../demoskin/img_color/red.jpg) no-repeat;}
+.silver { background:url(../../demoskin/img_color/silver.jpg) no-repeat;}
+.yellow { background:url(../../demoskin/img_color/yellow.jpg) no-repeat;}
+.violet { background:url(../../demoskin/img_color/violet.jpg) no-repeat;}
+.color { background-position:center center; display:block; width:13px; height:13px; border:2px solid #dcdcdc; float: left; }

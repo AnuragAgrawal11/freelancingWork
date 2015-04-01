@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Piecemaker>
+  <Settings>
+    <imageWidth>939</imageWidth>
+    <imageHeight>328</imageHeight>
+    <segments>10</segments>
+    <tweenTime>1.2</tweenTime>
+    <tweenDelay>0.1</tweenDelay>
+    <tweenType>easeInOutBack</tweenType>
+    <zDistance>0</zDistance>
+    <expand>0</expand>
+    <innerColor>0x111111</innerColor>
+    <textBackground>0x0064C8</textBackground>
+    <shadowDarkness>100</shadowDarkness>
+    <textDistance>25</textDistance>
+    <autoplay>12</autoplay>
+  </Settings>
+  <Image Filename="plug.jpg">
+    
+  </Image>
+  <Image Filename="artist.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="into1.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="jay.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="lady.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="order.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="oslov.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+  <Image Filename="stardust.jpg">
+    <Text>
+      <headline>Description Text</headline>
+      <break>Ӂ</break>
+      <paragraph>Here you can add a description text for every single image.</paragraph>
+      <break>Ӂ</break>
+      <inline>This is HTML text loaded from the external XML file and formatted with an external CSS file. So it's pretty simple to set this text. You can also easily add</inline>
+      <a href="http://www.modularweb.net/piecemaker" target="_blank">Ӂhyperlinks</a>
+      <paragraph>. This one leads you to the official Piecemaker website, by the way.</paragraph>
+    </Text>
+  </Image>
+</Piecemaker>

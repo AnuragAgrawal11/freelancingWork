@@ -1,0 +1,118 @@
+.tabContainer{
+	/* The UL */
+	float:right;
+	padding-right:13px;
+}
+
+#contentHolder{
+	
+	width:100%;
+	margin:1px;
+	line-height:16px;
+	font-size:14px;
+	padding:1px;
+	text-align:left;
+}
+
+#tabContent{
+
+	text-align:justify;
+	width:98%;
+}
+
+
+
+.tabContainer li{
+	/* This will arrange the LI-s next to each other */
+	display:inline;
+
+}
+
+.tabContainer li a,.tabContainer li a:visited{
+	/* Styling the hyperlinks of the tabs as colorful buttons */
+	
+	float:left;
+	font-size:18px;
+	
+	/* display:block allows for additinal CSS rules to take effect, such as paddings: */
+	display:block;
+	
+	padding:7px 16px 1px;
+	margin:4px 5px;
+	height:48px;
+	width:129px;
+	
+	/* Giving positioning */
+	position:relative;
+
+	/* CSS3 text-shadow */
+	text-shadow:1px 1px 1px #CCCCCC;
+}
+
+#overLine{
+	/* The line above the active button. */
+	position:absolute;
+
+	height:1px;
+	background-color:white;
+	width:90px;
+	
+	float:left;
+	left:1px;
+	top:-5px;
+	overflow:hidden;
+}
+
+
+ul .left{
+	/* The left span in the hyperlink */
+	
+	height:37px;
+	left:0;
+	position:absolute;
+	top:0;
+	width:10px;
+}
+
+ul .right{
+	/* The right span in the hyperlink */
+	
+	height:37px;
+	right:0;
+	position:absolute;
+	top:0;
+	width:10px;
+}
+
+/* Styling the colors individually: */
+
+ul a.green1{	background:url(img/details.png) no-repeat top center;	color:#343434;}
+
+
+
+ul a.blue1{	background:url(img/1.png) no-repeat top center;	color:#343434;}
+
+
+ul a.orange1{	background:url(img/rules.png) no-repeat top center;	color:#343434;}
+
+
+
+ul a.red1{	background:url(img/contact.png) no-repeat top center;	color:#343434;}
+
+
+/* The hover states: */
+ul a:hover{	background-position:center right; text-decoration:none;}
+ul a:hover span.left{ background-position:left bottom;}
+ul a:hover span.right{ background-position:right bottom;}
+
+.preloader{
+	display:block;
+	margin:120px auto;
+}
+
+.clear{
+	/* Old-school clear fix hack to clear the floats: */
+	clear:both;
+	height:1px;
+	overflow:hidden;
+}

@@ -1,0 +1,83 @@
+/* ------- 1. Structure ------- */
+
+table { border-top:2px solid #000; clear:both; margin:10px 0; width:100%; }
+
+/* ------- 2. Buttons ETC ------- */
+
+.buttons { background:transparent url(button.jpg) no-repeat scroll right 0; float:right; height:28px; margin:0 5px 0 0; padding:0 7px 0 0; display:inline-block; color:#fff; font-family:"Trebuchet MS"; font-style:italic; text-transform:uppercase;}
+.buttons span { background:transparent url(button.jpg) no-repeat scroll left 0; display:block; line-height:14px; padding:6px 8px 6px 13px;}
+.buttons:hover { background-position:right -28px;}
+.buttons:hover span { background-position:left -28px; text-decoration:none; color:#fff !important;}
+
+.buttons_input { background:transparent url(button.jpg) no-repeat scroll right -1px; float:right; height:28px; margin:0 5px 0 0; padding:0 7px 0 0; display:inline-block;}
+.buttons_input input { background:transparent url(button.jpg) no-repeat scroll -1px -1px; border:0px none #000 !important; display:block; line-height:14px; padding:6px 8px 6px 13px; cursor:pointer; color:#fff; font-family:"Trebuchet MS"; font-style:italic; text-transform:uppercase;}
+.buttons_input:hover { background-position:right -29px;}
+.buttons_input:hover input { background-position:-1px -29px; text-decoration:none; color:#fff !important;}
+
+#submit_rss { background:transparent url(sociables_sprites.jpg) no-repeat scroll -465px center; width:18px; height:18px; border:none;}
+
+#facebook, #facebook_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -250px center;}
+#twitter, #twitter_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -100px center;}
+#flicker, #flicker_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -150px center;}
+#orkut, #orkut_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -350px center;}
+#youtube, #youtube_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -300px center;}
+#wiki, #wiki_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -50px center;}
+#myspace { background:transparent url(sociables_sprites.jpg) no-repeat scroll -400px center;}
+
+#delicious_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll left center;}
+#stumbleupon_comment span { background:transparent url(sociables_sprites.jpg) no-repeat scroll -300px center; height:23px !important; margin-top:13px;}
+#facebook_comment a { padding-top:17px;}
+
+#gallery_view { background:url(portfolio_views.jpg) no-repeat scroll right top; width:27px; height:16px; }
+#gallery_view.active { background-position:left top;}
+#gallery_view:hover { background-position:left top;}
+#full_view { background:url(portfolio_views.jpg) no-repeat scroll right bottom; width:27px; height:16px; }
+#full_view.active { background-position:left bottom;}
+#full_view:hover { background-position:left bottom;} 
+
+.portfolio_gallery .description a.buttons { background:url(portfolio_more_gal.png) no-repeat scroll 0 2px; padding:0 0 0 15px; height:auto; margin:-1px 10px;}
+
+.submit_form { background:url(submit_btn.jpg) no-repeat; width:74px; height:25px; border:none; cursor:pointer; float:right; text-indent:-9999%; }
+.submit_form:hover { background-position:0 -25px;}
+.submit_form:active { background-position:0 -50px;}
+
+/* ------- 3. Typography ETC ------- */
+
+h1 { color: #000;}
+
+.page_title { color: #000;}
+a { color:#000;}
+a:hover { color:#000 !important; text-decoration:underline;}
+a.more { color: #343434;}
+a.more span { background: transparent url(arrow_right.jpg) no-repeat scroll left top; width: 11px; height: 15px; display: block; margin:-1px 0 0 2px; float: right;}
+a.more:hover span { background-position: right top;}
+
+.quote_start { background: transparent url(quotes.jpg) no-repeat scroll left top; position: absolute; left: -9px; width:23px; height:16px; display:block;}
+.quote_end { background: transparent url(quotes.jpg) no-repeat scroll right top; position: absolute; top:60%; right:-9px; width:23px; height:16px; display:block;}
+
+.bullet_circle { list-style-image:url(bullet_circle.jpg); line-height:20px; list-style-position:inside; color:#000;}
+
+.highlight { background:#000; padding:1px 4px; color:#fff;}
+
+/* ------- 4. Images ------- */
+
+#logo { background:transparent url(logo.png) no-repeat; width: 203px; height: 50px; display: block; text-indent: -9999%;}
+#logo1 { background:transparent url(logo1.png) no-repeat; display: block; text-indent: -9999%;}
+
+.slideshow-thumbnails-active{ background-color:#000;}
+.vertical_slideshow .slideshow-thumbnails a:hover{ background-color:#000 !important;}
+
+.magnify { background:url(magnify.html) no-repeat; width:90px; height:90px; position:absolute; top:50%; left:50%; margin:-45px 0 0 -45px; }
+
+.contact_icons { background:url(icons_contact.jpg) no-repeat; width:65px; height:55px; display:block; position:absolute; top:0; right:-55px; }
+
+#nofound { background:url(404_magnify.jpg) no-repeat; width:365px; height:175px; display:block; float:left; margin:-10px 0 0; }
+
+/* ------- 5. Menu ------- */
+
+#nav li.active a { color:#000;}
+#nav li.active li a { color:#343434;}
+#nav a:hover { color:#000;}
+#subMenusContainer a:hover { color:#000;}
+
+/* ------- 6. Preloaders ------- */

@@ -1,0 +1,5 @@
+Designed the Web Portal for institute?s technical fest Infotsav with the features like: SMS services implementation, IP tracking (external and internal both) user online email authentication and complete database backup of users.
+
+Complete dynamic website with admin dashboard to edit the website content.
+
+Technologies Used: PHP, Ajax, HTML, JavaScript, CSS, MySQL.
