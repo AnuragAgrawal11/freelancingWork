@@ -1,0 +1,16 @@
+Fast AID
+
+Fast aid application features:-
+1.	User can search medicines and other data diseases related information on his phone.
+2.	Available for allopathic, homeopathic as well as Ayurveda data.
+3.	User can search disease with voice also.
+4.	Web interface is also provided.
+5.	Can search the nearest medical facility available according to user’s location.
+
+Technologies used are:-
+i.	Phonegap
+ii.	HTML5
+iii.	Css3
+iv.	Javascript
+
+Application is completely developed by me.

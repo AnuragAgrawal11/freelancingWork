@@ -1,0 +1,190 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Klassio RSV</title> 
+	<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+
+	<!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon.png" />
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon.png" />
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+	<!-- For nokia devices: -->
+	<link rel="shortcut icon" href="images/icon.png" />
+
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css" />
+	<link rel="stylesheet" href="css/themes/default/RSVmain.min.css" />
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile.structure-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/photoswipe.css" />
+	<link rel="stylesheet" href="css/add2home.css" />
+	
+	
+        <link rel="stylesheet/less" href="css/style.php?theme=&color=" />
+
+	 <!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/jquery-ui-1.8.24.custom.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+        <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+        <!--<script type="text/javascript" src="js/jquery-ui-effects.js"></script>-->
+
+	<script src="js/helper.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/iphone-style-checkboxes.js"></script>
+	<script src="js/klass.min.js"></script>
+	<script src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+	<script src="js/add2home.js"></script>
+	<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        
+	<script type="text/javascript" src="js/app.js?v=30"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+
+<body>
+	<!-- Splash screen -->
+  	 <div id="splash"> 
+	   <img id="splash-bg" src="images/splash/splash-alternate.png" alt="splash image" />
+	   <img id="splash-title" src="images/splash/main.png" alt="splash title" />
+	 </div> 
+  <!-- end splash screen -->
+	<div id="menu">
+		<form action="search.php" /><h3><input id="search" type="text" placeholder="Search" /> </h3></form>
+		<ul>
+			<li class="active"><a href="./" data-transition="pop" class="contentLink">Home</a></li>
+			<li><a href="company-profile.php" data-transition="pop" class="contentLink">Company Profile</a></li>
+			<li><a href="products-services.php" data-transition="pop" class="contentLink">Products &amp; Services</a></li>
+			<li><a href="portfolio.php" data-transition="pop" class="contentLink">Portfolio</a></li>
+			<li><a href="news-events.php" data-transition="pop" class="contentLink">News &amp; Events</a></li>
+			<li><a href="gallery.php" data-transition="pop" class="contentLink">Gallery</a></li>
+			<li><a href="typography.php" data-transition="pop" class="contentLink">Typography</a></li>
+			<li><a href="blog.php" data-transition="pop" class="contentLink">Wordpress Blog</a></li>
+			<li><a href="twitter.php" data-transition="slide" class="contentLink">Twitter Feeds</a></li>
+			<li><a href="video-channel.php" data-transition="pop" class="contentLink">Video Channel</a></li>
+			<li><a href="contact-us.php" data-transition="pop" class="contentLink">Contact Us</a></li>
+			<li><a href="about.php" data-transition="slide" class="contentLink">About</a></li>
+                        <li><a href="404.php" data-transition="slide" class="contentLink">404</a></li>
+		</ul>
+	</div><div data-dom-cache="false" data-role="page" class="pages" id="home" data-theme="a">
+	<div data-role="header">
+            <div class="left">
+                <a href="#" class="showMenu menu-button"><img src="images/menu-button.png" width="40" /></a>
+                <a href="#" class="back-button"><img src="images/back-button.png" width="40" /></a>
+            </div>
+            <h1><p class="no-margin">Management Team</p><p class="no-margin">Klassio RSV</p></h1>
+            
+	</div>
+        <div class="header-shadow"></div>
+        <!-- /header -->
+    
+	<div data-role="content" data-theme="a" class="minus-shadow">
+	        <div class="cherry-slider" style="height: 176px;">
+                    <div anim="puff" anim-speed="1200" anim-direction="right" anim-position-left="50%" anim-position-top="20" class="anim-item" style="margin-left: -70px;"><img src="images/content/team.png" width="140" /></div>
+                    <div anim="slide" anim-speed="500" anim-direction="left" anim-position-left="30" anim-position-top="30" class="anim-item"><p class="little-padding white-bg gray-border">A</p></div>
+	            <div anim="slide" anim-speed="500" anim-direction="left" anim-position-left="30" anim-position-top="60" class="anim-item"><p class="little-padding white-bg gray-border">MOTIVATED</p></div>
+	            <div anim="slide" anim-speed="500" anim-direction="left" anim-position-left="30" anim-position-top="90" class="anim-item"><p class="little-padding white-bg gray-border">SINCERE</p></div>
+	            <div anim="slide" anim-speed="500" anim-direction="left" anim-position-left="30" anim-position-top="120" class="anim-item"><p class="little-padding white-bg gray-border">TEAM</p></div>
+                
+	        </div>
+            <!--
+            <div class="cherry-slider" style="height: 114px;">
+                <div anim="slide"anim-speed="200"anim-direction="right"anim-position-right="0"anim-position-top="0" class="anim-item"><img style="opacity: 0.2" src="images/man.png" width="72" /></div>
+                <div anim="slide"anim-speed="300"anim-direction="right"anim-position-right="8"anim-position-top="6" class="anim-item"><img style="opacity: 0.4" src="images/man.png" width="82" /></div>
+                <div anim="slide"anim-speed="400"anim-direction="right"anim-position-right="16"anim-position-top="12" class="anim-item"><img src="images/man.png" width="92" /></div>
+                <div anim="blind"anim-speed="700"anim-direction="up"anim-position-left="30"anim-position-top="0"  class="anim-item"><p class="little-padding aa">ALWAYS</p></div>
+                <div anim="blind"anim-speed="600"anim-direction="up"anim-position-left="30"anim-position-top="16"  class="anim-item"><p class="little-padding aa">IN&nbsp;MOTION</p></div>
+                <div anim="drop"anim-speed="1200"anim-direction="up"anim-position-left="34"anim-position-top="44"  class="anim-item"><p class="little-padding white-bg gray-border">POWERFULLY</p></div>
+            </div>
+            -->
+            <div class="">
+
+                <div class="team-members">
+                    <div class="member">
+						<div class="left">
+							<img class="photo" src="images/content/man2.jpg" />
+						</div>
+						<div class="left">
+							<strong>John Doe</strong>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<a href="#"><img src="images/twitter.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/facebook.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/linkedin.png" width="20" /></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="member">
+						<div class="left">
+							<img class="photo" src="images/content/man.jpg" />
+						</div>
+						<div class="left">
+							<strong>Jane Daniels</strong>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<a href="#"><img src="images/twitter.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/facebook.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/linkedin.png" width="20" /></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="member special-member">
+						<div class="left">
+							<img class="photo" src="images/content/manager.jpg" />
+						</div>
+						<div class="left">
+							<strong>Jack Daniels</strong>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<a href="#"><img src="images/twitter.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/facebook.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/linkedin.png" width="20" /></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					<div class="member">
+						<div class="left">
+							<img class="photo" src="images/content/worker.jpg" />
+						</div>
+						<div class="left">
+							<strong>Shaw Richards</strong>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<a href="#"><img src="images/twitter.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/facebook.png" width="20" /></a>&nbsp;&nbsp;
+							<a href="#"><img src="images/linkedin.png" width="20" /></a>
+						</div>
+						<div class="clear"></div>
+					</div>
+					
+				</div>
+            </div>
+	</div><!-- /content -->
+        
+        <div class="bread-crumb">
+            <ul>
+                <li><a data-transition="pop" href="index.php"><img src="images/bc-home.png" width="16" /></a></li>
+                <li><a data-transition="pop" href="company-profile.php"><span>Company Profile</span></a></li>
+                <li><span>Mission &amp; Vision</span></li>
+            </ul>
+        </div>
+        <div data-role="footer"><p>&copy; Klassio RSV. All Rights Reserved. <span><a class="scroll-to-top"><img src="images/top.png" width="32" /></a></span></p></div>
+</div><!-- /page -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34399779-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

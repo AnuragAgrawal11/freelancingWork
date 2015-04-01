@@ -1,0 +1,120 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Fast Aid</title> 
+	<meta id="extViewportMeta" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />	
+
+	<!-- Home screen icon  Mathias Bynens mathiasbynens.be/notes/touch-icons -->
+	<!-- For iPhone 4 with high-resolution Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/icon.png" />
+	<!-- For first-generation iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/icon.png" />
+	<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
+	<link rel="apple-touch-icon-precomposed" href="images/icon.png" />
+	<!-- For nokia devices: -->
+	<link rel="shortcut icon" href="images/icon.png" />
+
+
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/ui-lightness/jquery-ui-1.8.24.custom.css" />
+	<link rel="stylesheet" href="css/themes/default/RSVmain.min.css" />
+	<link rel="stylesheet" href="css/themes/default/jquery.mobile.structure-1.1.1.min.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
+	<link rel="stylesheet" href="css/photoswipe.css" />
+	<link rel="stylesheet" href="css/add2home.css" />
+	
+	
+        <link rel="stylesheet/less" href="css/style.php?theme=&color=" />
+
+	 <!-- fonts -->
+
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/jquery-ui-1.8.24.custom.min.js"></script>
+	
+	<script type="text/javascript" src="js/jquery.mobile-1.1.1.min.js"></script>
+        <script type="text/javascript" src="js/less-1.3.0.min.js"></script>
+        <!--<script type="text/javascript" src="js/jquery-ui-effects.js"></script>-->
+	<script type="text/javascript" charset="utf-8" src="js/cordova-2.2.0.js"></script> 
+	<script src="js/helper.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script src="js/iphone-style-checkboxes.js"></script>
+	<script src="js/klass.min.js"></script>
+	<script src="js/code.photoswipe.jquery-3.0.5.min.js"></script>
+	<script src="js/add2home.js"></script>
+	 <script src="js/diseaselist.js"></script>
+        
+	<script type="text/javascript" src="js/app.js?v=30"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head> 
+
+<body>
+	<!-- Splash screen -->
+ 
+  <!-- end splash screen -->
+	<div id="menu">
+		<form action="search.php" /><h3><input id="search" type="text" placeholder="Search" /> </h3></form>
+		<ul>
+			<li class="active"><a href="./" data-transition="pop" class="contentLink">Home</a></li>
+			<li><a href="company-profile.php" data-transition="pop" class="contentLink">Company Profile</a></li>
+			<li><a href="products-services.php" data-transition="pop" class="contentLink">Products &amp; Services</a></li>
+			<li><a href="portfolio.php" data-transition="pop" class="contentLink">Portfolio</a></li>
+			<li><a href="news-events.php" data-transition="pop" class="contentLink">News &amp; Events</a></li>
+			<li><a href="gallery.php" data-transition="pop" class="contentLink">Gallery</a></li>
+			<li><a href="typography.php" data-transition="pop" class="contentLink">Typography</a></li>
+			<li><a href="blog.php" data-transition="pop" class="contentLink">Wordpress Blog</a></li>
+			<li><a href="twitter.php" data-transition="slide" class="contentLink">Twitter Feeds</a></li>
+			<li><a href="video-channel.php" data-transition="pop" class="contentLink">Video Channel</a></li>
+			<li><a href="contact-us.php" data-transition="pop" class="contentLink">Contact Us</a></li>
+			<li><a href="about.php" data-transition="slide" class="contentLink">About</a></li>
+                        <li><a href="404.php" data-transition="slide" class="contentLink">404</a></li>
+		</ul>
+	</div><div data-dom-cache="false" data-role="page" class="pages" id="home" data-theme="a">
+	<div data-role="header">
+            <div class="left">
+                <a href="#" class="showMenu menu-button"><img src="images/menu-button.png" width="40" /></a>
+                <a href="#" class="back-button"><img src="images/back-button.png" width="40" /></a>
+            </div>
+            <h1><p class="no-margin">Mission &amp; Vision</p><p class="no-margin">Klassio RSV</p></h1>
+            
+	</div>
+        <div class="header-shadow"></div>
+        <!-- /header -->
+    
+	<div data-role="content" data-theme="a" class="minus-shadow">
+            <div class="cherry-slider" style="height: 184px;">
+                <div anim="fade" anim-speed="400" anim-direction="right" anim-position-left="10" anim-position-top="30" class="anim-item"><img src="images/glasses.png" width="240" /></div>
+                <div anim="puff" anim-speed="300" anim-direction="left" anim-position-right="30" anim-position-top="50" class="anim-item"><p class="little-padding white-bg gray-border">CLEAR</p></div>
+                <div anim="puff" anim-speed="300" anim-direction="left" anim-position-right="30" anim-position-top="80" class="anim-item"><p class="little-padding white-bg gray-border">STRAIGHT</p></div>
+                <div anim="puff" anim-speed="300" anim-direction="down" anim-position-right="30" anim-position-top="110" class="anim-item"><p class="little-padding white-bg gray-border">EXCEPTIONAL</p></div>
+            </div>
+            <div class="white-content-box" id="dTitle">
+                
+                    <div id="wrapper">
+	  	<div>
+	  		<div id="employeeDetails">
+ 		  		<img id="employeePic"/>
+	       		<h3 id="fullName"></h3>
+	       		<p id="employeeTitle"></p>
+	       		<p id="city"></p>
+	  		</div> 
+	    	<ul id="actionList"></ul>
+	  	</div>
+	</div>
+    <div id="busy"/>Loading...</div>
+            </div>
+	</div><!-- /content -->
+        
+        <div class="bread-crumb">
+            <ul>
+                <li><a data-transition="pop" href="index.php"><img src="images/bc-home.png" width="16" /></a></li>
+                <li><a data-transition="pop" href="company-profile.php"><span>Company Profile</span></a></li>
+                <li><span>Mission &amp; Vision</span></li>
+            </ul>
+        </div>
+        <div data-role="footer"><p>&copy; Klassio RSV. All Rights Reserved. <span><a class="scroll-to-top"><img src="images/top.png" width="32" /></a></span></p></div>
+</div><!-- /page -->
+
+</body>
+</html>

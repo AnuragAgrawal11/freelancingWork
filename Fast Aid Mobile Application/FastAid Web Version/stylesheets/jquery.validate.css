@@ -1,0 +1,21 @@
+/**
+ * @author GeekTantra
+ * @date 20 September 2009
+ */
+
+
+
+.ErrorField {
+    border-color: #D00;
+    color: #D00;
+    background: #FFFFFE;
+}
+
+span.ValidationErrors {
+    display:table-caption;
+    font-size: 18px;
+    color: #D00;
+    padding-left: 10px;
+    width:550px;
+	margin-left:200px;
+}
